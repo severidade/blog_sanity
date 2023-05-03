@@ -17,9 +17,58 @@ nav {
   display: flex;
   justify-content: space-around;
 }
+
 .container_blog {
   background-color: tomato;
   min-height: 20vh;
   width: 80vw;
   margin: auto;
+}
+
+.containar_posts {
+  background-color: tomato;
+  width: 90vw;
+  margin: auto;
+  display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-auto-rows: 300px;
+	grid-gap: 10px;
+}
+
+.post {
+  border: solid 1px black;
+}
+
+.container_img_post {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.container_img_post > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container_post  ul {
+  background-color: blue;
+}
+
+.container_author {
+  background: tomato;
+}
+
+.container_main_image{
+  width: 100vw;
+  height: 500px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.container_main_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
