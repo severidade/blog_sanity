@@ -1,3 +1,25 @@
 body {
   background-color: olive;
 }
+
+header {
+  background-color: black;
+  color: white;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+}
+
+nav {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+}
+.container_blog {
+  background-color: tomato;
+  min-height: 20vh;
+  width: 80vw;
+  margin: auto;
+}
