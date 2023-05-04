@@ -62,9 +62,7 @@ export default function SinglePost() {
             />
           </figure>
         </div>
-        <div className='container_post'>
-          <BlockContent blocks={singlePost.body} projectId="70kqnxpw" dataset="production"/>
-        </div>
+        <BlockContent blocks={singlePost.body} projectId="70kqnxpw" dataset="production" className='container_post'/>
       </div>
     </main>
   )

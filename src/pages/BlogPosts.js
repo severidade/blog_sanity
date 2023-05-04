@@ -46,30 +46,31 @@ export default function BlogPosts() {
   return(
     <main className='container_blog'>
       <section>
-        <h1>Blog Posts Página</h1>
-        <h2>Bem vindo ao meu blog</h2>
+        {/* <h1>Blog Posts Página</h1> */}
+        <h2>NEW on the Blog</h2>
         <div className='containar_posts'>
         {/* O operador && é usado para verificar se postData tem algum valor antes de executar o método map. Se postData for null ou undefined, a expressão retorna false e o método map não é executado, evitando possíveis erros. */}
           {postData && postData.map((post, index) =>(
             <article className='post'>
               <Link to={"/post/" + post.slug.current} key={post.slug.current}>
-                <span className='container_post'>
+                <span className='post_container'>
+                  <div className='sideWire'></div>
                   <figure className='container_img_post'>
                     <img
                       src={ post.thumbnailImage ? post.thumbnailImage.asset.url : post.mainImage.asset.url }
                       alt={`Esta é a thumbnail do post "${post.title}"`}
-/>
+                  />
                   </figure>
                   <span className='post_title'>
                     <h3>{post.title}</h3>
                     <p>{post.sub_title}</p>
                   </span>
-                  {/* <span className='post_date'>
-                    {formatDate(post.publishedAt)}
-                  </span> */}
-                  <span className='post_date' 
-                    dangerouslySetInnerHTML={{__html: formatDate(post.publishedAt)}}>
-                  </span>
+                  <div className='container_post_date'>
+                    <span className='post_date' 
+                      dangerouslySetInnerHTML={{__html: formatDate(post.publishedAt)}}>
+                    </span>
+                    <div class="fio"></div>
+                  </div>
                 </span>
               </Link>
             </article>
