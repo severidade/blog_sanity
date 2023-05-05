@@ -1,23 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Yeseva+One&display=swap');
 
-/* font-family: 'Lato', sans-serif;
-font-family: 'Yeseva One', cursive; */
-
-:root {
-  font-size: 62.5%;
-  font-family: 'Lato', sans-serif;
-}
-
-body {
-  background: rgb(203,79,99); /* Old browsers */
-	background: -moz-linear-gradient(45deg,  rgba(203,79,99,1) 0%, rgba(72,18,59,1) 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(45deg,  rgba(203,79,99,1) 0%,rgba(72,18,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg,  rgba(203,79,99,1) 0%,rgba(72,18,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  min-height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-
-}
 
 header {
   background-color: black;
