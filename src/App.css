@@ -115,14 +115,14 @@ nav {
   /* border-left: 1px #EBB990 solid; */
 }
 
-.post_title h3 {
+/* .post_title h3 {
   text-transform: uppercase;
   line-height: 1.4;
   font-weight: 800;
   padding-bottom: 10px;
   font-size: 14px;
   color: #EBB990;
-}
+} */
 
 .post_title p {
   font-size: 15px;
@@ -140,15 +140,6 @@ nav {
   margin-right: 10px;
 }
 
-h2 { 
-  text-align: center;
-  font-family: 'Yeseva One', cursive;
-  padding: 0 0 40px 0;
-  font-size: 44px;
-  line-height: 1em;
-  font-weight: 400;
-  color: #EBB990;
-}
 
 .post_date {
   transform: translate(-4px, 6px);
