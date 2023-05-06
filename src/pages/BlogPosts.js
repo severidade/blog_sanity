@@ -41,10 +41,8 @@ export default function BlogPosts() {
 
    if(!postData) return <div>Carregendo...</div>;
 
-   console.log(postData[0].thumbnailImage.asset.url);
-
   return(
-    <main className='container_blog'>
+    <main className='container_main'>
       <section>
         {/* <h1>Blog Posts Página</h1> */}
         <h2>NEW on the Blog</h2>
