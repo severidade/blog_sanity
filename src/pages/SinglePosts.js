@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom';
 import sanityClient from '../cliente';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
-// nao consegui instalar o @sanity/block-content-to-react https://www.npmjs.com/package/@sanity/block-content-to-react
+import { fetchSinglePost } from '../utils/fetch';
+
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -15,21 +16,8 @@ export default function SinglePost() {
   const { slug } = useParams();
 
   useEffect(() => {
-    sanityClient.fetch(`*[slug.current == "${slug}"]{
-      title,
-      sub_title,
-      _id,
-      slug,
-      mainImage{
-        asset->{
-          _id,
-          url,
-        }
-      },
-      body,
-      "name": author->name,
-      "authorImage": author->image
-    }`).then((data) => setSinglePost(data[0])).catch(console.error);
+    fetchSinglePost(slug)
+    .then((data) => setSinglePost(data[0])).catch(console.error);
   }, [slug]);
 
   if(!singlePost) return <div>Carregendo...</div>;

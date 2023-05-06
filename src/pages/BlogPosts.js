@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchPosts } from '../utils/fetchPosts.js';
+import { fetchPosts } from '../utils/fetch';
 import PosstList from '../components/PostList/PostList.js';
 
 export default function BlogPosts() {

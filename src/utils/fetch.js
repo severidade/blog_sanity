@@ -23,3 +23,23 @@ export async function fetchPosts() {
   }`);
   return data;
 }
+
+export async function fetchSinglePost(slug) {
+  const data = await sanityClient.fetch(`*[slug.current == "${slug}"]{
+    title,
+    sub_title,
+    _id,
+    slug,
+    mainImage{
+      asset->{
+        _id,
+        url,
+      }
+    },
+    body,
+    "name": author->name,
+    "authorImage": author->image
+  }`);
+  return data;
+}
+
