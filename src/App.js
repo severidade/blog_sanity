@@ -13,9 +13,7 @@ import Error from './pages/Error';
 function App() {
   return (
     <div>
-
-          <Navbar />
-
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/post/:slug" element={<SinglePosts />} />

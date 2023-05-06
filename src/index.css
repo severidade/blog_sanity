@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Yeseva+One&display=swap');
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Lato', sans-serif;
+
+  --primary-color: #EBB990;
+  --secundary-color-light: #cb4f63;
+  --secundary-color-dark: #2f0225;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: var(--secundary-color-light);
+	background: -moz-linear-gradient(45deg, var(--secundary-color-light) 0%, var(--secundary-color-dark) 80%);
+	background: -webkit-linear-gradient(45deg, var(--secundary-color-light) 0%, var(--secundary-color-dark) 80%);
+	background: linear-gradient(45deg, var(--secundary-color-light) 0%, var(--secundary-color-dark) 80%);
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Yeseva One', cursive;
+  padding: 0 0 40px 0;
+  font-size: 4.4em;
+  line-height: 1em;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+h3 {
+  text-transform: uppercase;
+  line-height: 1.4em;
+  font-weight: 800;
+  padding-bottom: 10px;
+  font-size: 1.4em;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: var(--primary-color);
+}
+
+.container_main {
+  min-height: calc(100vh - 70px);
+  width: 100vw;
+  max-width: 100%;
+  margin: auto;
+  padding: 40px 10px;
+}
+
+.container_list_posts {
+  width: 100%;
+  margin: auto;
+  display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: 170px;
+	grid-gap: 30px;
+}
+
+@media screen and (min-width: 900px) {
+  .container_main {
+    min-height: calc(100vh - 70px);
+    width: 80vw;
+    padding: 40px 0;
+  }
+  .container_list_posts {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 170px;
+    grid-gap: 30px;
+  }
 }
