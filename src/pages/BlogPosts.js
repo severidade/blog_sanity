@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchPosts } from '../utils/fetchPosts.js';
-import PosstList from '../componentes/PostList/PostList.js';
+import PosstList from '../components/PostList/PostList.js';
 
 export default function BlogPosts() {
   const [postData, setPost ] = useState(null);
