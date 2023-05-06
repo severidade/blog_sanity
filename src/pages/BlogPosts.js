@@ -1,32 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import sanityClient from "../cliente.js";
+import { fetchPosts } from '../utils/fetchPosts.js';
 import PosstList from '../componentes/PostList/PostList.js';
 
 export default function BlogPosts() {
   const [postData, setPost ] = useState(null);
 
   useEffect(() => {
-    sanityClient
-      .fetch(`*[_type == "post"] | order(publishedAt desc) {
-        title,
-        sub_title,
-        slug,
-        mainImage{
-          asset-> {
-            _id,
-            url
-          },
-          alt
-        },
-        thumbnailImage{
-          asset-> {
-            _id,
-            url
-          },
-          alt
-        },
-        publishedAt
-      }`)
+    fetchPosts()
       .then((data) => setPost(data))
       .catch(console.error);
   }, []);

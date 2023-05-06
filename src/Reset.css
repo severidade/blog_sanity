@@ -6,8 +6,12 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+:root {
+  font-size: 62.5%;
+}
+
 body{
-  font-size: 100%;
   list-style-type: none;
   line-height: 1;
 }
