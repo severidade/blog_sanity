@@ -17,38 +17,8 @@ nav {
   justify-content: space-around;
 }
 
-.containar_posts {
-  width: 100%;
-  margin: auto;
-  display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-	grid-auto-rows: 170px;
-	grid-gap: 30px;
-}
 
-.container_post > p {
-  margin-bottom: 40px;
-  line-height: 1.5;
-}
 
-/* .post {
-  border: solid 1px black;
-} */
-
-.container_img_post {
-  width: 130px;
-  height: 130px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 20px;
-}
-
-.container_img_post > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .container_post  ul {
   background-color: blue;
@@ -70,78 +40,4 @@ nav {
   height: 100%;
   object-fit: cover;
   object-position: top;
-}
-
-.fio {
-  flex-grow: 1;
-  border-bottom: 1px solid #EBB990;
-}
-
-.post_container {
-  /* background-color: violet; */
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 100%;
-  justify-content: space-between;
-}
-
-.container_post_date{
-  width: 100%;
-  /* background: olive; */
-  display: flex;
-  width: calc(100% - (130px * 1/2));
-  gap: 10px;
-  position: absolute;
-  bottom: 0;
-}
-
-.post_title {
-  flex-grow: 1;
-  width: calc(100% - (130px * 1/2));
-  padding-left: 20px ;
-  padding-right: calc((130px * 1/2) + 20px);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-right: 1px #EBB990 solid;
-  border-top: 1px #EBB990 solid ;
-  /* border-left: 1px #EBB990 solid; */
-}
-
-/* .post_title h3 {
-  text-transform: uppercase;
-  line-height: 1.4;
-  font-weight: 800;
-  padding-bottom: 10px;
-  font-size: 14px;
-  color: #EBB990;
-} */
-
-.post_title p {
-  font-size: 15px;
-  line-height: 1.4;
-  color: #EBB990;
-}
-.post_date {
-  text-transform: capitalize;
-  color: #EBB990;
-}
-
-.post_date strong {
-  font-weight: 900;
-  font-size: 15px;
-  margin-right: 10px;
-}
-
-
-.post_date {
-  transform: translate(-4px, 6px);
-}
-
-.sideWire {
-  width: 7px;
-  height: calc(100% - 16px);
-  position: absolute;
-  /* background: olive; */
-  border-left: 1px solid #EBB990;
 }
