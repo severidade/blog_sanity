@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from "../cliente.js";
 import { Link } from 'react-router-dom';
+import { formatDate } from '../utils/formatDate.js';
 
 export default function BlogPosts() {
   const [postData, setPost ] = useState(null);
@@ -30,14 +31,6 @@ export default function BlogPosts() {
       .then((data) => setPost(data))
       .catch(console.error);
   }, []);
-
-  function formatDate(dateString) {
-    const options = { day: 'numeric', month: 'long', year: 'numeric' };
-    const date = new Date(dateString);
-    return date.toLocaleDateString('pt-BR', options)
-      .replace(/(^|\s)de\s/g, '$1')
-      .replace(date.getDate(), `<strong>${date.getDate()}</strong>`);
-  }
 
    if(!postData) return <div>Carregendo...</div>;
 
