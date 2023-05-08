@@ -50,6 +50,12 @@ export async function fetchProjects() {
     data,
     place,
     description,
+    mainImage{
+      asset->{
+        _id,
+        url,
+      }
+    },
     projectType,
     link,
     tags

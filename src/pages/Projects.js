@@ -32,6 +32,12 @@ export default function Projects() {
                   <strong>Localização</strong>:{" "}
                   { project.place }
                 </span> */}
+                <figure className='container_main_image'>
+                  <img
+                    src={ project.mainImage.asset.url }
+                    alt={ project.title}
+                  />
+                </figure>
                 <span>
                   <strong>Titpo</strong>:{" "}
                   { project.projectType }
