@@ -26,30 +26,26 @@ export default function SinglePost() {
 
   return(
     <main className='container_blog'>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div className='container_title'>
-                <h1>{singlePost.title}</h1>
-                <p>{singlePost.sub_title}</p>
-              </div>
-              <div className='container_author'>
-                <img
-                  src={urlFor(singlePost.authorImage).url()}
-                  alt={singlePost.name}
-                />
-                <p>{singlePost.name}</p>
-              </div>
+      <div className='container_single_post'>
+        <div className='header_single_post'>
+            <div className='container_title'>
+              <h1>{singlePost.title}</h1>
+              <p>{singlePost.sub_title}</p>
             </div>
-          </div>
-          <figure className='container_main_image'>
-            <img
-              src={singlePost.mainImage.asset.url}
-              alt={singlePost.title}
-            />
-          </figure>
+            <div className='container_author'>
+              <img
+                src={urlFor(singlePost.authorImage).url()}
+                alt={singlePost.name}
+              />
+              <p>{singlePost.name}</p>
+            </div>
         </div>
+        <figure className='container_main_image'>
+          <img
+            src={singlePost.mainImage.asset.url}
+            alt={singlePost.title}
+          />
+        </figure>
         <BlockContent blocks={singlePost.body} projectId="70kqnxpw" dataset="production" className='container_post'/>
       </div>
     </main>
