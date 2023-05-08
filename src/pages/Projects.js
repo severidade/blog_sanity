@@ -10,7 +10,7 @@ export default function Projects() {
       .catch(console.error);
   }, []);
   return(
-    <main>
+    <main className='container_main'>
       <section>
         <h2>Projetos</h2>
         <section>
@@ -27,11 +27,11 @@ export default function Projects() {
                 {/* <span>
                   <strong>Finalizado em </strong>:{" "}
                   {new Date(project.date).toLocaleDateString()}
-                </span> */}
+                </span>
                 <span>
                   <strong>Localização</strong>:{" "}
                   { project.place }
-                </span>
+                </span> */}
                 <span>
                   <strong>Titpo</strong>:{" "}
                   { project.projectType }
