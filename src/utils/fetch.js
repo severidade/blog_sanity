@@ -43,3 +43,17 @@ export async function fetchSinglePost(slug) {
   return data;
 }
 
+export async function fetchProjects() {
+  const data = await sanityClient.fetch(
+  `*[_type == "project"] | order(publishedAt desc) {
+    title,
+    data,
+    place,
+    description,
+    projectType,
+    link,
+    tags
+  }`);
+  return data;
+}
+

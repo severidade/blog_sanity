@@ -1,29 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import sanityClient from '../cliente.js'
-// import project from '../../sanityblog/schemas/project.js';
+import { fetchProjects } from '../utils/fetch';
 
 export default function Projects() {
   const [projectData, setProjectData] = useState(null);
 
   useEffect(() => {
-    sanityClient
-      .fetch(`*[_type == "project"] | order(publishedAt desc) {
-        title,
-        data,
-        place,
-        description,
-        projectType,
-        link,
-        tags
-      }`)
+      fetchProjects()
       .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
   return(
     <main>
       <section>
-        <h1>Esta é a pagina de projetos</h1>
-        <h2>Aqui listo meus projetos de destaque</h2>
+        <h2>Projetos</h2>
         <section>
           {projectData && projectData.map((project,index) =>(
             <article>
