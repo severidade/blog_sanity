@@ -1,25 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Yeseva+One&display=swap');
-
-
-header {
-  background-color: black;
-  color: white;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10vw;
-}
-
-nav {
-  width: 300px;
-  display: flex;
-  justify-content: space-around;
-}
-
-
-
-
 .container_post  ul {
   background-color: blue;
 }
@@ -28,16 +6,4 @@ nav {
   background: tomato;
 }
 
-.container_main_image{
-  width: 100vw;
-  height: 500px;
-  max-width: 100%;
-  overflow: hidden;
-}
 
-.container_main_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
