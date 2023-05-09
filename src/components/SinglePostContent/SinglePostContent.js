@@ -12,20 +12,7 @@ function urlFor(source) {
 
 export default function SinglePostContent({ singlePost }) {
   return (
-    <div className='container_single_post'>
-      <div className='header_single_post'>
-          <div className='container_title'>
-            <h1>{singlePost.title}</h1>
-            <p>{singlePost.sub_title}</p>
-          </div>
-          <div className='container_author'>
-            <img
-              src={urlFor(singlePost.authorImage).url()}
-              alt={singlePost.name}
-            />
-            <p>{singlePost.name}</p>
-          </div>
-      </div>
+    <div className={ styles.container_single_post }>
       <figure className={ styles.container_main_image }>
         <img
           className={ styles.post_main_image }
@@ -33,7 +20,28 @@ export default function SinglePostContent({ singlePost }) {
           alt={singlePost.title}
         />
       </figure>
-      <BlockContent blocks={singlePost.body} projectId="70kqnxpw" dataset="production" className='container_post'/>
+      <div className='header_single_post'>
+          <div className={ styles.container_author }>
+            <figure className={ styles.author_avatar }>
+              <img
+                src={urlFor(singlePost.authorImage).url()}
+                alt={singlePost.name}
+              />
+            </figure>
+            <p>{singlePost.name}</p>
+          </div>
+          <div className='container_title'>
+            <h1 className='post_title'>{singlePost.title}</h1>
+            <p className={ styles.post_subtitle }>{singlePost.sub_title}</p>
+          </div>
+      </div>
+
+      <BlockContent
+        blocks={singlePost.body}
+        projectId="70kqnxpw"
+        dataset="production"
+        className={ styles.container_post }
+      />
     </div>
 
 
