@@ -15,7 +15,7 @@ export default function SinglePost() {
   if(!singlePost) return <div>Carregendo...</div>;
 
   return(
-    <main className='container_blog'>
+    <main className='container_main'>
       <SinglePostContent singlePost={singlePost} />
     </main>
   )
