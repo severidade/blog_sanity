@@ -43,30 +43,13 @@
 
 @media screen and (min-width: 750px) {
   .container_main_image{
-    height: 400px;
+    height: 500px;
   }
 }
 
 @media screen and (min-width: 900px) {
   .container_main_image{
-    width: 50vw;
-    height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 90px;
-    /* transform: translate(-10vw, -40px); */
+    width: 100vw;
+    transform: translate(-10vw, -20px);
   }
-  /* .container_main {
-    min-height: calc(100vh - 70px);
-    width: 80vw;
-    padding: 40px 0;
-  }
-  .container_list_posts {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-auto-rows: 170px;
-    grid-gap: 30px;
-  } */
 }

@@ -59,6 +59,11 @@ img {
   min-height: calc(100vh - 70px);
   width: 100vw;
   max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container_section {
+  width: 100%;
   margin: auto;
   padding: 20px 10px;
 }
@@ -84,11 +89,17 @@ img {
 }
 
 @media screen and (min-width: 900px) {
-  .container_main {
+  /* .container_main {
     min-height: calc(100vh - 70px);
     width: 80vw;
     padding: 40px 0;
+  } */
+
+  .container_section {
+    padding: 20px 10px;
+    width: 80vw;
   }
+
   .container_list_posts {
     width: 100%;
     margin: auto;
