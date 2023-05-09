@@ -14,6 +14,7 @@ export default function SinglePostContent({ singlePost }) {
   return (
     <section className='container_section'>
       <div className={ styles.container_single_post }>
+        
         <figure className={ styles.container_main_image }>
           <img
             className={ styles.post_main_image }
@@ -21,6 +22,7 @@ export default function SinglePostContent({ singlePost }) {
             alt={singlePost.title}
           />
         </figure>
+
         <div className='header_single_post'>
             <div className={ styles.container_author }>
               <figure className={ styles.author_avatar }>

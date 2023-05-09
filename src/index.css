@@ -65,7 +65,8 @@ img {
 .container_section {
   width: 100%;
   margin: auto;
-  padding: 20px 10px;
+  padding: 20px 5vw;
+  /* background-color: white; */
 }
 
 .container_list_posts {

@@ -3,10 +3,11 @@
 }
 
 .container_main_image{
-  width: 100vw;
-  height: 250px;
+  width: 90vw;
+  height: 90vw;
   overflow: hidden;
-  transform: translate(-10px, -20px);
+  /* transform: translate(-10px, -20px); */
+  margin-bottom: 20px;
 }
 
 .post_subtitle {
@@ -43,7 +44,7 @@
 
 @media screen and (min-width: 750px) {
   .container_main_image{
-    height: 500px;
+    height: 400px;
   }
 }
 
