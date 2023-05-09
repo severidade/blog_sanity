@@ -7,3 +7,5 @@
 <p>Estou usando o CSS modules. Essa técnica que permite escrever CSS em módulos isolados, onde cada módulo tem seu próprio escopo de estilo. Isso significa que as classes definidas em um módulo não podem ser acessadas fora dele, a menos que sejam explicitamente exportadas.</p>
 
 <p> O CSS Global está no arquivo index.css</p>
+
+
