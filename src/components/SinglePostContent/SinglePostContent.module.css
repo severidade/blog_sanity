@@ -3,11 +3,11 @@
 }
 
 .container_main_image{
-  width: 100vw;
-  height: 250px;
+  width: 90vw;
+  height: 90vw;
   overflow: hidden;
-  /* margin-bottom: 30px; */
-  transform: translate(-10px, -20px);
+  /* transform: translate(-10px, -20px); */
+  margin-bottom: 20px;
 }
 
 .post_subtitle {
@@ -40,4 +40,17 @@
 
 .container_post {
   padding: 0 20px;
+}
+
+@media screen and (min-width: 750px) {
+  .container_main_image{
+    height: 400px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container_main_image{
+    width: 100vw;
+    transform: translate(-10vw, -20px);
+  }
 }

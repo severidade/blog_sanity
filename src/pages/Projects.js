@@ -13,7 +13,7 @@ export default function Projects() {
     <main className='container_main'>
       <section>
         <h2>Projetos</h2>
-        <section>
+        <section className='container_section'>
           {projectData && projectData.map((project,index) =>(
             <article>
               <a

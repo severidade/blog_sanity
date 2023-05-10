@@ -27,7 +27,7 @@ export default function Home() {
 
   return(
     <main>
-      <section>
+      <section className='container_section'>
         <figure className='container_image'>
           <img
             src={urlFor(author.authorImage).url()}

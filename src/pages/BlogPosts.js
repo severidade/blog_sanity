@@ -15,7 +15,7 @@ export default function BlogPosts() {
 
   return(
     <main className='container_main'>
-      <section>
+      <section className='container_section'>
         <h2>NEW on the Blog</h2>
         <div className='container_list_posts'>        
         {/* O operador && é usado para verificar se postData tem algum valor antes de executar o método map. Se postData for null ou undefined, a expressão retorna false e o método map não é executado, evitando possíveis erros. */}
