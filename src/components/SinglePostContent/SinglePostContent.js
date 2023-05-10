@@ -24,16 +24,7 @@ export default function SinglePostContent({ singlePost }) {
         </figure>
 
         <div className='header_single_post'>
-            <div className={ styles.container_author }>
-              <figure className={ styles.author_avatar }>
-                <img
-                  src={urlFor(singlePost.authorImage).url()}
-                  alt={singlePost.name}
-                />
-              </figure>
-              <p>{singlePost.name}</p>
-            </div>
-            <div className='container_title'>
+            <div className={ styles.container_title }>
               <h1 className='post_title'>{singlePost.title}</h1>
               {/* <p className={ styles.post_subtitle }>{singlePost.sub_title}</p> */}
               {singlePost.sub_title ? <p className={ styles.post_subtitle }>{singlePost.sub_title}</p> : null}
@@ -46,6 +37,15 @@ export default function SinglePostContent({ singlePost }) {
           dataset="production"
           className={ styles.container_post }
         />
+        <div className={ styles.footer_container_author }>
+          <figure className={ styles.author_avatar }>
+            <img
+              src={urlFor(singlePost.authorImage).url()}
+              alt={singlePost.name}
+            />
+          </figure>
+          <p>{singlePost.name}</p>
+        </div>
       </div>
     </section>
   );
