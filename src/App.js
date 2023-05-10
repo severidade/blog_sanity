@@ -12,7 +12,7 @@ import Error from './pages/Error';
 
 function App() {
   return (
-    <div>
+    <>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<Error /> } />
         </Routes>
-    </div>
+    </>
   );
 }
 
