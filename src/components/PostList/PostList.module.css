@@ -48,6 +48,10 @@
   border-top: 1px var(--primary-color) solid ;
 }
 
+.sub_title {
+  margin-bottom: 0;
+}
+
 .container_post_date {
   width: 100%;
   display: flex;

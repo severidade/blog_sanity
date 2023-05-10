@@ -19,7 +19,7 @@ export default function Post({ post }) {
           </figure>
           <span className={ styles.post_title} >
             <h3>{post.title}</h3>
-            { post.sub_title ? <p>{ post.sub_title }</p>: null}
+            { post.sub_title ? <p className={ styles.sub_title }>{ post.sub_title }</p>: null}
           </span>
           <div className={ styles.container_post_date }>
             <span 
