@@ -80,6 +80,7 @@ img {
 	grid-gap: 30px;
 }
 
+
 @media screen and (min-width: 750px) {
   .container_list_posts {
     width: 100%;
