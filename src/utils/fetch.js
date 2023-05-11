@@ -35,6 +35,7 @@ const POST_FIELDS = `
 const SINGLE_POST_FIELDS = `
   title,
   sub_title,
+  publishedAt,
   _id,
   slug,
   body,
@@ -68,6 +69,18 @@ export async function fetchSinglePost(slug) {
 
 export async function fetchProjects() {
   const query = `*[_type == "${PROJECT_TYPE}"] | order(publishedAt desc) {${PROJECT_FIELDS}}`;
+  const data = await sanityClient.fetch(query);
+  return data;
+}
+
+export async function fetchPreviousPost(publishedAt) {
+  const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
+  const data = await sanityClient.fetch(query);
+  return data;
+}
+
+export async function fetchNextPost(publishedAt) {
+  const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
   const data = await sanityClient.fetch(query);
   return data;
 }
