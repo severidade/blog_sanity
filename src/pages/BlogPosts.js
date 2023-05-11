@@ -11,7 +11,7 @@ export default function BlogPosts() {
       .catch(console.error);
   }, []);
 
-   if(!postData) return <div>Carregendo...</div>;
+  if(!postData) return <div>Carregendo...</div>;
 
   return(
     <main className='container_main'>
