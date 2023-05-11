@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchPreviousPost, fetchNextPost } from '../../utils/fetch';
 
-export default function PostCarousel({ singlePost }) {
+import styles from './PostCarousel.module.css';
 
+export default function PostCarousel({ singlePost }) {
   const [previousPost, setPreviousPost] = useState(null);
   const [nextPost, setNextPost] = useState(null);
 
@@ -18,22 +19,33 @@ export default function PostCarousel({ singlePost }) {
       .catch(console.error);
   }, [singlePost]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className='post_carousel'>
+    <div className={ styles.container_post_carousel }>
       {nextPost && (
-        <Link 
+        <Link
+          id='nav'
           to={"/post/" + nextPost.slug.current}
           key={nextPost.slug.current}
+          className={ styles.next_post }
+          onClick={scrollToTop}
         > 
-          {nextPost.title} 
+          Next <strong>Post</strong> 
+          {/* {nextPost.title}  */}
         </Link>
       )}
       {previousPost && (
         <Link
           to={"/post/" + previousPost.slug.current}
           key={previousPost.slug.current}
+          className={ styles.prev_post }
+          onClick={scrollToTop}
         > 
-          {previousPost.title} 
+          Prev <strong>Post</strong> 
+         {/* {previousPost.title}  */}
         </Link>
       )}
     </div>
