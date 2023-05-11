@@ -71,7 +71,7 @@ img {
 .container_section, .container_post_carousel {
   width: 100%;
   margin: auto;
-  padding: 20px 5vw;
+  padding: 80px 5vw 20px 5vw;
   /* background-color: white; */
 }
 
