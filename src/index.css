@@ -84,6 +84,22 @@ img {
 	grid-gap: 30px;
 }
 
+.post_carousel {
+  background-color: black;
+  display: flex;
+  gap: 20px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.post_carousel a { 
+  text-transform: uppercase;
+  color: antiquewhite;
+  font-size: 1em;
+  line-height: 1em;
+}
+
 @media screen and (min-width: 750px) {
   .container_list_posts {
     width: 100%;

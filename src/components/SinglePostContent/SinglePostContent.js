@@ -4,6 +4,7 @@ import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 
 import styles from './SinglePostContent.module.css';
+import PostCarousel from '../PostCarousel/PostCarousel';
 
 const builder = imageUrlBuilder(sanityClient);
 
@@ -48,6 +49,8 @@ export default function SinglePostContent({ singlePost }) {
           </figure>
           <p>{singlePost.name}</p>
         </div>
+
+        <PostCarousel singlePost={singlePost}/>
 
       </div>
     </section>
