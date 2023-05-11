@@ -64,7 +64,11 @@ img {
   overflow-x: hidden;
 }
 
-.container_section {
+.container_post_carousel {
+  background-color: black;
+}
+
+.container_section, .container_post_carousel {
   width: 100%;
   margin: auto;
   padding: 20px 5vw;
@@ -79,7 +83,6 @@ img {
 	grid-auto-rows: 170px;
 	grid-gap: 30px;
 }
-
 
 @media screen and (min-width: 750px) {
   .container_list_posts {
