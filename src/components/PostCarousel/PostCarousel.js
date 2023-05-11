@@ -19,13 +19,19 @@ export default function PostCarousel({ singlePost }) {
       .catch(console.error);
   }, [singlePost]);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className={ styles.container_post_carousel }>
       {nextPost && (
-        <Link 
+        <Link
+          id='nav'
           to={"/post/" + nextPost.slug.current}
           key={nextPost.slug.current}
           className={ styles.next_post }
+          onClick={scrollToTop}
         > 
           Next <strong>Post</strong> 
           {/* {nextPost.title}  */}
@@ -36,6 +42,7 @@ export default function PostCarousel({ singlePost }) {
           to={"/post/" + previousPost.slug.current}
           key={previousPost.slug.current}
           className={ styles.prev_post }
+          onClick={scrollToTop}
         > 
           Prev <strong>Post</strong> 
          {/* {previousPost.title}  */}
