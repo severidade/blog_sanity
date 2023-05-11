@@ -33,7 +33,7 @@ export default function PostCarousel({ singlePost }) {
           className={ styles.next_post }
           onClick={scrollToTop}
         > 
-          Next <strong>Post</strong> 
+          <strong>Next</strong> Post 
           {/* {nextPost.title}  */}
         </Link>
       )}
@@ -44,7 +44,7 @@ export default function PostCarousel({ singlePost }) {
           className={ styles.prev_post }
           onClick={scrollToTop}
         > 
-          Prev <strong>Post</strong> 
+          <strong>Prev</strong> Post
          {/* {previousPost.title}  */}
         </Link>
       )}
