@@ -16,6 +16,8 @@ export default function SinglePostContent({ singlePost }) {
   return (
     <section className='container_section'>
       <div className={ styles.container_single_post }>
+
+      <PostCarousel singlePost={singlePost}/>
         
         <figure className={ styles.container_main_image }>
           <img
@@ -24,7 +26,7 @@ export default function SinglePostContent({ singlePost }) {
             alt={singlePost.title}
           />
         </figure>
-
+        
         <div className='header_single_post'>
             <div className={ styles.container_title }>
               <h1 className='post_title'>{singlePost.title}</h1>
@@ -50,7 +52,7 @@ export default function SinglePostContent({ singlePost }) {
           <p>{singlePost.name}</p>
         </div>
 
-        <PostCarousel singlePost={singlePost}/>
+        
 
       </div>
     </section>
