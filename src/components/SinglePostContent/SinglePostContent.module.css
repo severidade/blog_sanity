@@ -23,6 +23,14 @@
   margin-bottom: 40px;
 }
 
+.container_post ol li {
+  list-style: auto;
+  margin-left: 10px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+
 .footer_container_author {
   display: flex ;
   /* height: 50px; */

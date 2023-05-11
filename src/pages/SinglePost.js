@@ -9,14 +9,15 @@ export default function SinglePost() {
 
   useEffect(() => {
     fetchSinglePost(slug)
-    .then((data) => setSinglePost(data[0])).catch(console.error);
+      .then((data) => setSinglePost(data[0]))
+      .catch(console.error);
   }, [slug]);
 
-  if(!singlePost) return <div>Carregendo...</div>;
+  if (!singlePost) return <div>Carregendo...</div>;
 
-  return(
-    <main className='container_main'>
-      <SinglePostContent singlePost={singlePost} />
-    </main>
-  )
+  return (
+      <main className='container_main'>
+        <SinglePostContent singlePost={singlePost} />
+      </main>
+  );
 }

@@ -4,8 +4,10 @@ import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 
 import styles from './SinglePostContent.module.css';
+import PostCarousel from '../PostCarousel/PostCarousel';
 
 const builder = imageUrlBuilder(sanityClient);
+
 function urlFor(source) {
   return builder.image(source)
 }
@@ -37,6 +39,7 @@ export default function SinglePostContent({ singlePost }) {
           dataset="production"
           className={ styles.container_post }
         />
+
         <div className={ styles.footer_container_author }>
           <figure className={ styles.author_avatar }>
             <img
@@ -46,6 +49,9 @@ export default function SinglePostContent({ singlePost }) {
           </figure>
           <p>{singlePost.name}</p>
         </div>
+
+        <PostCarousel singlePost={singlePost}/>
+
       </div>
     </section>
   );
