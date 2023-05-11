@@ -16,8 +16,8 @@
 
 .next_post strong, .prev_post strong {
   font-weight: 900;
-  margin: 6px 0;
-  color: tomato;
+  margin-bottom: 0.5em;
+  /* color: tomato; */
 }
 
 .prev_post {
