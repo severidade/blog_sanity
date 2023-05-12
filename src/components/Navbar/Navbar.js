@@ -19,7 +19,6 @@ export default function Navbar() {
         <h1>BLOG</h1>
       </NavLink>
       <div
-        // className='hamburger'
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}>
       </div>
