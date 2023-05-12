@@ -1,17 +1,4 @@
-.container_header {
-  background-color: black;
-  color: white;
-  height: 60px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10vw;
-  position: fixed;
-  z-index: 999;
-}
-
-/*========= icone hamburger ========= */
+/* Hamburger icon */
 .hamburger {
   width: 25px;
   height: 4px;
@@ -48,27 +35,46 @@
 }
 
 .hamburger.open::before{
-  transform-origin: left;
   transform: rotate(-45deg);
-  width: 4px;
-  background-color: black;
+  transform: rotate(45deg) translate(-8.67px, -5.67px);
 }
 
 .hamburger.open::after{
-  transform-origin: right;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg) translate(-7.67px, 5.67px);
 }
 
-/*========= Fim icone hamburger ========= */
-.close_menu  {
-  font-size: 14px;
+/* Header container */
+.container_header {
+  background-color: black;
+  color: white;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10vw;
+  position: fixed;
+  z-index: 999;
+}
+
+/* Close menu button */
+.close_menu {
+  font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
   position: absolute;
-  top: 20px;
-  right: 76px;
+  top: 23px;
+  right: 47;
+  transition: ease-in-out 0.5s;
+  color: black;
 }
 
+.container_nav.open .close_menu {
+  color: white;
+  right: 80px;
+}
+
+/* Navigation container */
 .container_nav {
   background-color: rgb(0, 0, 0);
   width: 100vw;
@@ -77,26 +83,42 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-size: 24px;
   position: fixed;
   right: 0;
   top: 0;
-  transform: translateX(100%);
-  transition: transform ease-in-out 0.5s;
-  padding: 20vw 10vw;
-  gap: 20px;
+  transform: translateY(-100vh);
+  padding: 35vw 20vw 0 20vw;
+  gap: 1em;
+  overflow: hidden;
+  font-size: 5em;
+  transition: transform ease-in-out ;
 }
 
 .container_nav.open {
-  transform: translateX(0);
+  transform: translateY(0%);
 }
 
 .container_nav > a {
   color: rgb(108, 107, 107);
   font-family: 'Yeseva One', cursive;
-  font-size: 2.2em;
-  padding: 0.5em;
   position: relative;
+  transform: translateX(-100%);
+  transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+
+.container_nav.open > a:nth-of-type(1){
+  transform: translateX(0%);
+  transition-duration: 0.6s;
+}
+
+.container_nav.open > a:nth-of-type(2){
+  transform: translateX(0%);
+  transition-duration: 1s;
+}
+
+.container_nav.open > a:nth-of-type(3){
+  transform: translateX(0%);
+  transition-duration: 1.3s;
 }
 
 .container_nav > a[class="active"]{
