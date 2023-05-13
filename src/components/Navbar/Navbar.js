@@ -13,11 +13,17 @@ export default function Navbar() {
     setmenuOpen(!menuOpen);
   };
 
+  const toggleMenu2 = () => {
+    menuOpen ? setmenuOpen(false) : window.location.href = '/';
+  };
+
   return(
     <header className="container_header">
-      <NavLink to="/">
-        <h1>BLOG</h1>
-      </NavLink>
+      <NavLink 
+        to="/" 
+        className="logo"
+        onClick={toggleMenu2}
+      />
       <div
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}>
@@ -29,7 +35,7 @@ export default function Navbar() {
         </div>
         <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
         <NavLink to="/post" onClick={toggleMenu}>Blog Posts</NavLink>
-        <NavLink to="/projects"onClick={toggleMenu} >Projetos</NavLink>
+        <NavLink to="/projects"onClick={toggleMenu} >Projects</NavLink>
       </nav>
     </header>
   )

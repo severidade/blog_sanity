@@ -1,7 +1,7 @@
 /* Hamburger icon */
 .hamburger {
   width: 25px;
-  height: 4px;
+  height: 2px;
   border-radius: 3px;
   position: relative;
   background-color: white;
@@ -13,7 +13,7 @@
 .hamburger::before, .hamburger::after{
   content: "";
   width: 30px;
-  height: 4px;
+  height: 2px;
   position: absolute;
   border-radius: 3px;
   right: 0;
@@ -57,10 +57,18 @@
   z-index: 999;
 }
 
+.logo {
+  width: 80px;
+  height: 25px;
+  background-color: white;
+  border-radius: 20px;
+  z-index: 999;
+}
+
 /* Close menu button */
 .close_menu {
   font-size: 13px;
-  font-weight: 900;
+  /* font-weight: 900; */
   text-transform: uppercase;
   position: absolute;
   top: 23px;
