@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import ReactPaginate from 'react-paginate';
 import { fetchPosts } from '../utils/fetch';
 import PosstList from '../components/PostList/PostList.js';
+import Pagination from '../components/Pagination/Pagination';
 
 export default function BlogPosts() {
   const [postData, setPost] = useState(null);
@@ -17,6 +17,7 @@ export default function BlogPosts() {
   if (!postData) return <div>Carregando...</div>;
 
   const pageCount = Math.ceil(postData.length / perPage);
+  // Math.ceil() para arredondar para cima garantindo que haja pelo menos uma página para exibir os posts.
 
   const handlePageClick = (data) => {
     setPageNumber(data.selected);
@@ -34,18 +35,12 @@ export default function BlogPosts() {
           {currentItems.map((post, index) => (
             <PosstList key={post.slug.current} post={post} />
           ))}
-        </div>
-        <ReactPaginate
-          previousLabel={'Anterior'}
-          nextLabel={'Próxima'}
+        <Pagination 
           pageCount={pageCount}
-          marginPagesDisplayed={1}
-          pageRangeDisplayed={0}
-          // breakLabel={'---'}
-          onPageChange={handlePageClick}
-          containerClassName={'pagination'}
-          activeClassName={'active'}
+          handlePageClick={handlePageClick}
+          currentPage={pageNumber}
         />
+        </div>
       </section>
     </main>
   );
