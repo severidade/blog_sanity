@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import ReactPaginate from 'react-paginate';
 import { fetchPosts } from '../utils/fetch';
 import PosstList from '../components/PostList/PostList.js';
 
 export default function BlogPosts() {
-  const [postData, setPost ] = useState(null);
+  const [postData, setPost] = useState(null);
+  const [pageNumber, setPageNumber] = useState(0);
+  const [perPage] = useState(3);
 
   useEffect(() => {
     fetchPosts()
@@ -11,19 +14,39 @@ export default function BlogPosts() {
       .catch(console.error);
   }, []);
 
-  if(!postData) return <div>Carregendo...</div>;
+  if (!postData) return <div>Carregando...</div>;
 
-  return(
+  const pageCount = Math.ceil(postData.length / perPage);
+
+  const handlePageClick = (data) => {
+    setPageNumber(data.selected);
+  };
+
+  const start = pageNumber * perPage;
+  const end = start + perPage;
+  const currentItems = postData.slice(start, end);
+
+  return (
     <main className='container_main'>
       <section className='container_section'>
         <h2>NEW on the Blog</h2>
-        <div className='container_list_posts'>        
-        {/* O operador && é usado para verificar se postData tem algum valor antes de executar o método map. Se postData for null ou undefined, a expressão retorna false e o método map não é executado, evitando possíveis erros. */}
-          {postData && postData.map((post, index) =>(
-            <PosstList key={post.slug.current} post={post}/>
+        <div className='container_list_posts'>
+          {currentItems.map((post, index) => (
+            <PosstList key={post.slug.current} post={post} />
           ))}
         </div>
+        <ReactPaginate
+          previousLabel={'Anterior'}
+          nextLabel={'Próxima'}
+          pageCount={pageCount}
+          marginPagesDisplayed={1}
+          pageRangeDisplayed={0}
+          // breakLabel={'---'}
+          onPageChange={handlePageClick}
+          containerClassName={'pagination'}
+          activeClassName={'active'}
+        />
       </section>
     </main>
-  )
+  );
 }

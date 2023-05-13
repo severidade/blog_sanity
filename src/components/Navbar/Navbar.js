@@ -13,7 +13,7 @@ export default function Navbar() {
     setmenuOpen(!menuOpen);
   };
 
-  const toggleMenu2 = () => {
+  const toggleMenuHome = () => {
     menuOpen ? setmenuOpen(false) : window.location.href = '/';
   };
 
@@ -22,7 +22,7 @@ export default function Navbar() {
       <NavLink 
         to="/" 
         className="logo"
-        onClick={toggleMenu2}
+        onClick={toggleMenuHome}
       />
       <div
         className={`hamburger ${menuOpen ? 'open' : ''}`}
