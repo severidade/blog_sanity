@@ -1,0 +1,50 @@
+.pagination li, .pagination a {
+  margin-bottom: 0;
+}
+
+.pagination {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  padding: 0 10px;
+}
+
+.pagination li  a { 
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+}
+
+li.previous, li.next {
+  width: 60px;
+  text-align: center;
+  font-size: 1.4em;
+  /* padding: 0 10px; */
+  font-weight: 900;
+}
+
+.pagination > li.previous.disabled , .pagination > li.next.disabled {
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+
+
+.pagination li.active  a::before {
+  content: "";
+  border: solid 1px white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
