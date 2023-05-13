@@ -84,6 +84,33 @@ img {
 	grid-gap: 30px;
 }
 
+.pagination {
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin-top: 20px;
+}
+
+
+.pagination > li.previous , .pagination > li.next  {
+  background-color: #ffffff;
+} 
+
+.pagination > li.previous.disabled , .pagination > li.next.disabled {
+  opacity: 0.5;
+}
+
+
+.pagination li.active  a { 
+  background-color: tomato;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
 
 @media screen and (min-width: 750px) {
   .container_list_posts {
