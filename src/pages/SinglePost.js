@@ -28,7 +28,7 @@ export default function SinglePost() {
 
   return (
       <main className='container_main'>
-        <Helmet>
+        <Helmet key={ogData.title}>
           <title>{singlePost.title}</title>
           <meta name="description" content={singlePost.excerpt} />
           <meta property="og:title" content={ogData.title} />
