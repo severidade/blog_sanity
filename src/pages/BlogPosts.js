@@ -14,7 +14,7 @@ export default function BlogPosts() {
       .catch(console.error);
   }, []);
 
-  if (!postData) return <div>Carregando...</div>;
+  if (!postData) return <div className='loading'>Loading...</div>;
 
   const pageCount = Math.ceil(postData.length / perPage);
   // Math.ceil() para arredondar para cima garantindo que haja pelo menos uma página para exibir os posts.

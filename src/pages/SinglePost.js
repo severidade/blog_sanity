@@ -14,7 +14,7 @@ export default function SinglePost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!singlePost) return <div>Carregendo...</div>;
+  if (!singlePost) return <div className='loading'>Loading...</div>;
 
   const ogData = {
     title: singlePost.title,
