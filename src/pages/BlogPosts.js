@@ -7,7 +7,7 @@ export default function BlogPosts() {
   const [postData, setPost] = useState(null);
   const [pageNumber, setPageNumber] = useState(0);
   // const [perPage] = useState(3);
-  const [perPage, setPerPage] = useState(1);
+  const [perPage, setPerPage] = useState(null);
 
   useEffect(() => {
     fetchPosts()
