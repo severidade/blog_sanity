@@ -23,7 +23,7 @@ export default function Home() {
       .catch(console.error);
   }, []);
 
-  if(!author) return <div>Carregendo...</div>;
+  if(!author) return <div className='loading'>Loading...</div>;
 
   return(
     <main>

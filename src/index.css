@@ -93,6 +93,15 @@ img {
   padding-bottom: 120px;
 }
 
+.loading {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
 
 @media screen and (min-width: 750px) {
   .container_list_posts {
