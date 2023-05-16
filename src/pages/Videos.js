@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { formatDate } from '../utils/formatDate';
 import sanityClient from "../cliente";
 import BlockContent from '@sanity/block-content-to-react';
+import ReactPlayer from 'react-player';
 
 export default function Videos() {
   const [videos, setVideos] = useState([]);
@@ -34,16 +35,13 @@ export default function Videos() {
             <p>{video.title}</p>
             <div className="video-container">
               {playVideoId === video._id ? (
-                <iframe
+                <ReactPlayer
+                  url={`https://www.youtube.com/watch?v=${video.video?.youtubeId}`}
+                  playing={true}
+                  controls
                   width="100%"
-                  height="56.25%"
-                  // Proporção de aspecto 16:9 (9 / 16 * 100%)
-                  src={`https://www.youtube.com/embed/${video.video?.youtubeId}?autoplay=1`}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
+                  height="100%"
+                />
               ) : (
                 <div>
                   <img
