@@ -5,9 +5,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import SinglePosts from './pages/SinglePost';
 import BlogPosts from './pages/BlogPosts';
-import Projects from './pages/Projects';
-import Error from './pages/Error';
 import Videos from './pages/Videos';
+import Error from './pages/Error';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/post/:slug" element={<SinglePosts />} />
           <Route path="/post" element={<BlogPosts />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="*" element={<Error /> } />
         </Routes>

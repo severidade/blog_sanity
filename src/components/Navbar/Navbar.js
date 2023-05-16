@@ -37,7 +37,6 @@ export default function Navbar() {
         </div>
         <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
         <NavLink to="/post" onClick={toggleMenu}>Blog Posts</NavLink>
-        <NavLink to="/projects"onClick={toggleMenu} >Projects</NavLink>
         <NavLink to="/videos" onClick={toggleMenu}>Videos</NavLink>
       </nav>
     </header>
