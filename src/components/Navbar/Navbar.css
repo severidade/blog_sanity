@@ -1,47 +1,57 @@
 /* Hamburger icon */
 .hamburger {
-  width: 25px;
-  height: 2px;
-  border-radius: 3px;
+  width: 30px;
+  height: 30px;
   position: relative;
-  background-color: white;
+  /* background-color: rgb(184, 81, 81); */
   z-index: 10000;
   cursor: pointer;
-  transition: ease-in-out 0.5s;
 }
 
-.hamburger::before, .hamburger::after{
+.hamburger_animacao {
+  width: 25px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: white;
+  transition: ease-in-out 0.5s;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* transform: translate(-50%, -50%); */
+}
+
+.hamburger_animacao::before, .hamburger_animacao::after{
   content: "";
   width: 30px;
   height: 2px;
   position: absolute;
-  border-radius: 3px;
+  border-radius: 2px;
   right: 0;
   background-color: white;
   transition: ease-in-out 0.5s;
 }
 
-.hamburger::before {
+.hamburger_animacao::before {
   top: 10px;
 }
 
-.hamburger::after {
+.hamburger_animacao::after {
   top: -10px;
 }
 
-.hamburger.open {
-  background-color: black;
-  width: 0;
+.hamburger.open > .hamburger_animacao {
+  background-color: rgb(0, 0, 0);
+  width: 3px;
 }
 
-.hamburger.open::before{
+.hamburger.open > .hamburger_animacao::before{
   transform: rotate(-45deg);
   transform: rotate(45deg) translate(-8.67px, -5.67px);
 }
 
-.hamburger.open::after{
+.hamburger.open > .hamburger_animacao::after{
   transform: rotate(-45deg) translate(-7.67px, 5.67px);
-}
+} 
 
 /* Header container */
 .container_header {
@@ -79,7 +89,7 @@
 
 .container_nav.open .close_menu {
   color: white;
-  right: 80px;
+  right: calc(10vw + 40px);
 }
 
 /* Navigation container */
