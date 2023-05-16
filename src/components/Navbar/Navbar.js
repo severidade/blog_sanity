@@ -26,7 +26,9 @@ export default function Navbar() {
       />
       <div
         className={`hamburger ${menuOpen ? 'open' : ''}`}
-        onClick={toggleMenu}>
+        onClick={toggleMenu}
+      >
+        <div className='hamburger_animacao'></div>
       </div>
       <nav className={`container_nav ${menuOpen ? 'open' : ''}`}>
         <div
