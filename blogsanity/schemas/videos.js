@@ -14,11 +14,6 @@ export default defineType({
       type: 'document',
       title: 'Vídeo do YouTube',
       fields: [
-        // {
-        //   name: 'title',
-        //   type: 'string',
-        //   title: 'Título'
-        // },
         {
           name: 'youtubeId',
           type: 'string',
@@ -31,16 +26,6 @@ export default defineType({
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-    }),
-
-
-    // defineField({
-    //   name: "place",
-    //   type: "string",
-    // }),
-    defineField({ 
-      name: "description",
-      type: "text",
     }),
     defineField({
       name: 'body',
