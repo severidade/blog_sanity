@@ -103,6 +103,11 @@ img {
   font-size: 2em;
 }
 
+
+.video {
+  background-color: #fa9292;
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 750px) {
   .container_list_posts {
     width: 100%;
