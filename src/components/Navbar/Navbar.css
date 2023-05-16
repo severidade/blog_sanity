@@ -139,6 +139,10 @@
   transition-duration: 1.3s;
 }
 
+.container_nav.open > a:nth-of-type(4){
+  transform: translateX(0%);
+  transition-duration: 2s;
+}
 .container_nav > a[class="active"]{
  color: white;
 }
