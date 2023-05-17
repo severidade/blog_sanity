@@ -28,7 +28,7 @@ export default function Home() {
   return(
     <main>
       <section className='container_section'>
-        <figure className='container_image'>
+        {/* <figure className='container_image'>
           <img
             src={urlFor(author.authorImage).url()}
             alt={author.name}
@@ -37,7 +37,10 @@ export default function Home() {
         <h1>{author.name}</h1>
         <div>
           <BlockContent blocks={author.bio}/>
-        </div>
+        </div> */}
+        <h1>Sobre esse blog</h1>
+
+        <p>Sanity é uma plataforma de gerenciamento de conteúdo (Content Management System - CMS) que permite criar, gerenciar e distribuir conteúdo para aplicativos, sites e outros canais digitais. No entanto, ela se diferencia dos CMS tradicionais por ser uma plataforma headless, o que significa que ela separa a camada de gerenciamento de conteúdo da camada de apresentação, permitindo que o conteúdo seja consumido por diferentes interfaces e dispositivos. Além disso, a Sanity é altamente flexível e customizável, permitindo que os desenvolvedores criem soluções sob medida para seus projetos.</p>
       </section>
     </main>
   )
