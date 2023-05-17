@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: "videos",
@@ -21,7 +21,6 @@ export default defineType({
         }
       ],
     }),
-
     defineField({
       name: 'publishedAt',
       title: 'Published at',
@@ -31,6 +30,12 @@ export default defineType({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+    }),
+    defineField({
+      name: 'documents',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'doc' }] }],
+      title: 'Documentos Relacionados',
     }),
   ],
 });
