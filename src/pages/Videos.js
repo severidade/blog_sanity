@@ -11,7 +11,22 @@ export default function Videos() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await sanityClient.fetch(`*[_type == "videos"] | order(publishedAt asc) `);
+        const response = await sanityClient.fetch(
+          `*[_type == "videos"] | order(publishedAt asc) {
+            title,
+            _id,
+            video,
+            publishedAt,
+            body,
+            documents[]->{
+              _id,
+              title,
+              url,
+              pdfFile,
+              classification
+            }
+          }`
+        );
         setVideos(response);
       } catch (error) {
         console.error('Ocorreu um erro ao buscar os vídeos:', error);
