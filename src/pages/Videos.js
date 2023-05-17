@@ -11,7 +11,22 @@ export default function Videos() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await sanityClient.fetch(`*[_type == "videos"] | order(publishedAt asc) `);
+        const response = await sanityClient.fetch(
+          `*[_type == "videos"] | order(publishedAt asc) {
+            title,
+            _id,
+            video,
+            publishedAt,
+            body,
+            documents[]->{
+              _id,
+              title,
+              url,
+              pdfFile,
+              classification
+            }
+          }`
+        );
         setVideos(response);
       } catch (error) {
         console.error('Ocorreu um erro ao buscar os vídeos:', error);
@@ -24,6 +39,36 @@ export default function Videos() {
   const handlePlayVideo = (videoId) => {
     setPlayVideoId(videoId);
   };
+
+  const renderDocument = (doc) => {
+    if (doc.classification === 'Link') {
+      return (
+        <a
+          className='link'
+          href={doc.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {doc.title}
+        </a>
+      );
+    } else if (doc.classification === 'PDF') {
+      return (
+        <a
+          className='pdf_file'
+          href={`??????`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {doc.title}
+        </a>
+      );
+    } else {
+      return doc.title;
+    }
+  };
+
+  console.log(videos[2]);
 
   return (
     <main className="container_main">
@@ -69,6 +114,16 @@ export default function Videos() {
                 projectId="70kqnxpw"
                 dataset="production"
               />
+              {/* Verifica se tem documento e se a matriz é maior que 0 */}
+              {video.documents && video.documents.length > 0 && (
+                <ul>
+                  {video.documents.map((doc) => (
+                    <li key={doc.title}>
+                      {renderDocument(doc)}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
