@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../cliente';
-import imageUrlBuilder from '@sanity/image-url';
-import BlockContent from '@sanity/block-content-to-react';
+// import imageUrlBuilder from '@sanity/image-url';
+// import BlockContent from '@sanity/block-content-to-react';
 
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source) {
-  return builder.image(source)
-}
+// const builder = imageUrlBuilder(sanityClient);
+// function urlFor(source) {
+//   return builder.image(source)
+// }
 
 export default function Home() {
 
