@@ -16,9 +16,12 @@ export default defineType({
       type: 'url',
     }),
     defineField({
-      name: 'file',
+      name: 'pdfFile',
       title: 'PDF File',
       type: 'file',
+      options: {
+        accept: 'application/pdf', // Limita a seleção de arquivos apenas a PDF
+      },
     }),
     defineField({
       name: 'classification',
