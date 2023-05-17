@@ -56,7 +56,7 @@ export default function Videos() {
       return (
         <a
           className='pdf_file'
-          href={`blog.severidade.com.br/${doc._id}`}
+          href={`??????`}
           target="_blank"
           rel="noopener noreferrer"
         >
