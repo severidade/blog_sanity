@@ -40,6 +40,36 @@ export default function Videos() {
     setPlayVideoId(videoId);
   };
 
+  const renderDocument = (doc) => {
+    if (doc.classification === 'Link') {
+      return (
+        <a
+          className='link'
+          href={doc.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {doc.title}
+        </a>
+      );
+    } else if (doc.classification === 'PDF') {
+      return (
+        <a
+          className='pdf_file'
+          href={`blog.severidade.com.br/${doc._id}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {doc.title}
+        </a>
+      );
+    } else {
+      return doc.title;
+    }
+  };
+
+  console.log(videos[2]);
+
   return (
     <main className="container_main">
       <section className="container_section">
@@ -84,6 +114,16 @@ export default function Videos() {
                 projectId="70kqnxpw"
                 dataset="production"
               />
+              {/* Verifica se tem documento e se a matriz é maior que 0 */}
+              {video.documents && video.documents.length > 0 && (
+                <ul>
+                  {video.documents.map((doc) => (
+                    <li key={doc.title}>
+                      {renderDocument(doc)}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
