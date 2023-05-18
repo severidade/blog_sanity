@@ -1,23 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { formatDate } from '../../utils/formatDate';
-import BlockContent from '@sanity/block-content-to-react';/* essa vai para o componte*/
-import ReactPlayer from 'react-player'; /* essa vai para o componte*/
+import BlockContent from '@sanity/block-content-to-react';
+import ReactPlayer from 'react-player';
+import { setPlayingVideoId } from '../../store'; // Importa a ação do Redux
 
 export default function SingleVideo({ video }) {
-  const [playVideoId, setPlayVideoId] = useState(null);
+  const dispatch = useDispatch();
+  const playingVideoId = useSelector((state) => state);
 
   const handlePlayVideo = (videoId) => {
-    setPlayVideoId(videoId);
+    dispatch(setPlayingVideoId(videoId));
   };
 
   return (
-    <div 
-      className='video'
-      key={video._id} 
-    >
-      <p dangerouslySetInnerHTML={{__html: formatDate(video.publishedAt)}}></p>
+    <div className='video' key={video._id}>
       <div className="player_video">
-        {playVideoId === video._id ? (
+        {playingVideoId === video._id ? (
           <ReactPlayer
             className="containar_video"
             url={`https://www.youtube.com/watch?v=${video.video?.youtubeId}`}
@@ -42,14 +41,10 @@ export default function SingleVideo({ video }) {
             </button>
           </div>
         )}
-        
       </div>
       <h3>{video.title}</h3>
-      <BlockContent
-        blocks={video.body}
-        projectId="70kqnxpw"
-        dataset="production"
-      />
+      <BlockContent blocks={video.body} projectId="70kqnxpw" dataset="production" />
+      <p dangerouslySetInnerHTML={{ __html: formatDate(video.publishedAt) }}></p>
     </div>
   );
 }
