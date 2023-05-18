@@ -22,7 +22,6 @@ export default function Videos() {
 
   if (!videos) return <div className='loading'>Loading...</div>;
 
-
   return (
     <main className="container_main">
       <section className="container_section">
@@ -34,7 +33,6 @@ export default function Videos() {
               key={video._id} 
             >
               <p dangerouslySetInnerHTML={{__html: formatDate(video.publishedAt)}}></p>
-              <p>{video.title}</p>
               <div className="player_video">
                 {playVideoId === video._id ? (
                   <ReactPlayer
@@ -61,7 +59,9 @@ export default function Videos() {
                     </button>
                   </div>
                 )}
+                
               </div>
+              <h3>{video.title}</h3>
               <BlockContent
                 blocks={video.body}
                 projectId="70kqnxpw"
