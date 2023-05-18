@@ -1,44 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { formatDate } from '../utils/formatDate';
-import sanityClient from "../cliente";
+import { fetchVideos } from '../utils/fetch';
 import BlockContent from '@sanity/block-content-to-react';
 import ReactPlayer from 'react-player';
 
 export default function Videos() {
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState(null);
   const [playVideoId, setPlayVideoId] = useState(null);
 
   useEffect(() => {
-    const fetchVideos = async () => {
-      try {
-        const response = await sanityClient.fetch(
-          `*[_type == "videos"] | order(publishedAt asc) {
-            title,
-            _id,
-            video,
-            publishedAt,
-            body,
-            documents[]->{
-              _id,
-              title,
-              url,
-              pdfFile,
-              classification
-            }
-          }`
-        );
-        setVideos(response);
-      } catch (error) {
-        console.error('Ocorreu um erro ao buscar os vídeos:', error);
-      }
-    };
-
-    fetchVideos();
+    fetchVideos()
+      .then((data) => setVideos(data))
+      .catch(console.error);
   }, []);
 
   const handlePlayVideo = (videoId) => {
     setPlayVideoId(videoId);
   };
+
+  if (!videos) return <div className='loading'>Loading...</div>;
 
   const renderDocument = (doc) => {
     if (doc.classification === 'Link') {
