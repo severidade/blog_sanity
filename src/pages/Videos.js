@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { formatDate } from '../utils/formatDate';
 import { fetchVideos } from '../utils/fetch';
-import BlockContent from '@sanity/block-content-to-react';
-import ReactPlayer from 'react-player';
+
+import { formatDate } from '../utils/formatDate';/* essa vai para o componte*/
+import BlockContent from '@sanity/block-content-to-react';/* essa vai para o componte*/
+import ReactPlayer from 'react-player'; /* essa vai para o componte*/
 
 export default function Videos() {
   const [videos, setVideos] = useState(null);
-  const [playVideoId, setPlayVideoId] = useState(null);
+  const [playVideoId, setPlayVideoId] = useState(null); /* essa vai para o componte*/
 
   useEffect(() => {
     fetchVideos()
@@ -14,41 +15,13 @@ export default function Videos() {
       .catch(console.error);
   }, []);
 
+  /* essa vai para o componte*/
   const handlePlayVideo = (videoId) => {
     setPlayVideoId(videoId);
   };
 
   if (!videos) return <div className='loading'>Loading...</div>;
 
-  const renderDocument = (doc) => {
-    if (doc.classification === 'Link') {
-      return (
-        <a
-          className='link'
-          href={doc.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {doc.title}
-        </a>
-      );
-    } else if (doc.classification === 'PDF') {
-      return (
-        <a
-          className='pdf_file'
-          href={`??????`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {doc.title}
-        </a>
-      );
-    } else {
-      return doc.title;
-    }
-  };
-
-  console.log(videos[2]);
 
   return (
     <main className="container_main">
@@ -94,16 +67,6 @@ export default function Videos() {
                 projectId="70kqnxpw"
                 dataset="production"
               />
-              {/* Verifica se tem documento e se a matriz é maior que 0 */}
-              {video.documents && video.documents.length > 0 && (
-                <ul>
-                  {video.documents.map((doc) => (
-                    <li key={doc.title}>
-                      {renderDocument(doc)}
-                    </li>
-                  ))}
-                </ul>
-              )}
             </div>
           ))}
         </div>
