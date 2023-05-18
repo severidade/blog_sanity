@@ -56,15 +56,15 @@ const PROJECT_FIELDS = `
   tags
 `;
 
-const DATA_FIELDS = `
-  documents[]->{
-    _id,
-    title,
-    url,
-    pdfFile,
-    classification
-  }
-`;
+// const DATA_FIELDS = `
+//   documents[]->{
+//     _id,
+//     title,
+//     url,
+//     pdfFile,
+//     classification
+//   }
+// `;
 
 const VIDEO_FIELDS = `
   title,
