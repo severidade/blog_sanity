@@ -56,32 +56,87 @@ const PROJECT_FIELDS = `
 `;
 
 export async function fetchPosts() {
-  const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) {${POST_FIELDS}}`;
-  const data = await sanityClient.fetch(query);
-  return data;
+  try {
+    const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) {${POST_FIELDS}}`;
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Ocorreu um erro ao buscar os posts:', error);
+    throw error;
+  }
 }
 
 export async function fetchSinglePost(slug) {
-  const query = `*[slug.current == "${slug}"] {${SINGLE_POST_FIELDS}}`;
-  const data = await sanityClient.fetch(query);
-  return data;
+  try {
+    const query = `*[slug.current == "${slug}"] {${SINGLE_POST_FIELDS}}`;
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Ocorreu um erro ao buscar o post:', error);
+    throw error;
+  }
 }
 
 export async function fetchProjects() {
-  const query = `*[_type == "${PROJECT_TYPE}"] | order(publishedAt desc) {${PROJECT_FIELDS}}`;
-  const data = await sanityClient.fetch(query);
-  return data;
+  try {
+    const query = `*[_type == "${PROJECT_TYPE}"] | order(publishedAt desc) {${PROJECT_FIELDS}}`;
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Ocorreu um erro ao buscar os projetos:', error);
+    throw error;
+  }
 }
 
 export async function fetchPreviousPost(publishedAt) {
-  const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
-  const data = await sanityClient.fetch(query);
-  return data;
+  try {
+    const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Ocorreu um erro ao buscar o post anterior:', error);
+    throw error;
+  }
 }
 
 export async function fetchNextPost(publishedAt) {
-  const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
-  const data = await sanityClient.fetch(query);
-  return data;
+  try {
+    const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Ocorreu um erro ao buscar o próximo post:', error);
+    throw error;
+  }
 }
+
+// export async function fetchPosts() {
+//   const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) {${POST_FIELDS}}`;
+//   const data = await sanityClient.fetch(query);
+//   return data;
+// }
+
+// export async function fetchSinglePost(slug) {
+//   const query = `*[slug.current == "${slug}"] {${SINGLE_POST_FIELDS}}`;
+//   const data = await sanityClient.fetch(query);
+//   return data;
+// }
+
+// export async function fetchProjects() {
+//   const query = `*[_type == "${PROJECT_TYPE}"] | order(publishedAt desc) {${PROJECT_FIELDS}}`;
+//   const data = await sanityClient.fetch(query);
+//   return data;
+// }
+
+// export async function fetchPreviousPost(publishedAt) {
+//   const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
+//   const data = await sanityClient.fetch(query);
+//   return data;
+// }
+
+// export async function fetchNextPost(publishedAt) {
+//   const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
+//   const data = await sanityClient.fetch(query);
+//   return data;
+// }
 
