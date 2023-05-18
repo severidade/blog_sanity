@@ -50,7 +50,7 @@ export default function BlogPosts() {
   return (
     <main className='container_main'>
       <section className='container_section'>
-        <h2>NEW on the Blog</h2>
+        <h2>Blog Posts</h2>
         <div className='container_list_posts'>
           {currentItems.map((post, index) => (
             <PosstList key={post.slug.current} post={post} />
