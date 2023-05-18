@@ -10,4 +10,6 @@
 
 <p> O CSS Global está no arquivo index.css</p>
 
+verificar
+
 
