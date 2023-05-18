@@ -5,7 +5,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import ReactPlayer from 'react-player';
 
 export default function Videos() {
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState(null);
   const [playVideoId, setPlayVideoId] = useState(null);
 
   useEffect(() => {
@@ -39,6 +39,8 @@ export default function Videos() {
   const handlePlayVideo = (videoId) => {
     setPlayVideoId(videoId);
   };
+
+  if (!videos) return <div className='loading'>Loading...</div>;
 
   const renderDocument = (doc) => {
     if (doc.classification === 'Link') {
