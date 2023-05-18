@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { formatDate } from '../../utils/formatDate';
 import BlockContent from '@sanity/block-content-to-react';
 import ReactPlayer from 'react-player';
+import styles from './SingleVideo.module.css';
 import { setPlayingVideoId } from '../../store'; // Importa a ação do Redux
 
 export default function SingleVideo({ video }) {
@@ -14,11 +15,11 @@ export default function SingleVideo({ video }) {
   };
 
   return (
-    <div className='video' key={video._id}>
-      <div className="player_video">
+    <div className={ styles.video } key={video._id}>
+      <div className={ styles.player_video }>
         {playingVideoId === video._id ? (
           <ReactPlayer
-            className="containar_video"
+            className={ styles.containar_video }
             url={`https://www.youtube.com/watch?v=${video.video?.youtubeId}`}
             playing={true}
             controls
@@ -26,7 +27,7 @@ export default function SingleVideo({ video }) {
             height="100%"
           />
         ) : (
-          <div className='thumbnail_container'>
+          <div className={ styles.thumbnail_container }>
             <img
               src={`https://img.youtube.com/vi/${video.video?.youtubeId}/maxresdefault.jpg`}
               alt={`Thumbnail do vídeo ${video.title}`}
@@ -34,16 +35,16 @@ export default function SingleVideo({ video }) {
               onClick={() => handlePlayVideo(video._id)}
             />
             <button
-              className="play_button"
+              className={ styles.play_button }
               onClick={() => handlePlayVideo(video._id)}
-            >
-              Play
-            </button>
+            />
           </div>
         )}
       </div>
-      <h3>{video.title}</h3>
-      <BlockContent blocks={video.body} projectId="70kqnxpw" dataset="production" />
+      <div className={ styles.data_video }>
+        <h3>{video.title}</h3>
+        <BlockContent blocks={video.body} projectId="70kqnxpw" dataset="production" />
+      </div>
       <p dangerouslySetInnerHTML={{ __html: formatDate(video.publishedAt) }}></p>
     </div>
   );
