@@ -2,6 +2,7 @@ import sanityClient from "../cliente";
 
 const POST_TYPE = "post";
 const PROJECT_TYPE = "project";
+const VIDEO_TYPE = "videos";
 
 const MAIN_IMAGE_FIELDS = `
   mainImage{
@@ -55,6 +56,25 @@ const PROJECT_FIELDS = `
   tags
 `;
 
+const DATA_FIELDS = `
+  documents[]->{
+    _id,
+    title,
+    url,
+    pdfFile,
+    classification
+  }
+`;
+
+const VIDEO_FIELDS = `
+  title,
+  _id,
+  video,
+  publishedAt,
+  body,
+  ${DATA_FIELDS}
+`;
+
 export async function fetchPosts() {
   try {
     const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) {${POST_FIELDS}}`;
@@ -106,6 +126,17 @@ export async function fetchNextPost(publishedAt) {
     return data;
   } catch (error) {
     console.error('Ocorreu um erro ao buscar o próximo post:', error);
+    throw error;
+  }
+}
+
+export async function fetchVideos() {
+  try {
+    const query = `*[_type == "${VIDEO_TYPE}"] | order(publishedAt asc) {${VIDEO_FIELDS}}`;
+    const data = await sanityClient.fetch(query);
+    return data;
+  } catch (error) {
+    console.error('Ocorreu um erro ao buscar os vídeos:', error);
     throw error;
   }
 }
