@@ -1,4 +1,6 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import store from './store';
 
 import Navbar from './components/Navbar/Navbar';
 import { Routes, Route } from 'react-router-dom';
@@ -11,6 +13,7 @@ import Error from './pages/Error';
 function App() {
   return (
     <>
+      <Provider store={store}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -19,6 +22,7 @@ function App() {
           <Route path="/videos" element={<Videos />} />
           <Route path="*" element={<Error /> } />
         </Routes>
+      </Provider>
     </>
   );
 }

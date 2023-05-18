@@ -23,7 +23,7 @@ export default function Navbar() {
         to="/" 
         className="logo"
         onClick={toggleMenuHome}
-      />
+      >THE<span>BOX</span></NavLink>
       <div
         className={`hamburger ${menuOpen ? 'open' : ''}`}
         onClick={toggleMenu}

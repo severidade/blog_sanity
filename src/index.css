@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Yeseva+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;900&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Yeseva+One&display=swap');
 :root {
   --primary-color: #4b4a4a;
   --bg_color: #f6f6f6;
@@ -24,7 +23,7 @@ h2, .post_title {
   text-align: center;
   font-family: 'Yeseva One', cursive;
   padding: 0 0 40px 0;
-  font-size: 4.4em;
+  font-size: 4em;
   line-height: 1em;
   font-weight: 400;
   color: var(--primary-color);
@@ -71,7 +70,7 @@ img {
 .container_section, .container_post_carousel {
   width: 100%;
   margin: auto;
-  padding: 80px 5vw 20px 5vw;
+  padding: 90px 5vw 20px 5vw;
   /* background-color: white; */
 
   min-height: 100vh;
