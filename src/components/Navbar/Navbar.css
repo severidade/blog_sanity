@@ -105,12 +105,12 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   position: fixed;
   right: 0;
   top: 0;
   transform: translateY(-100vh);
-  padding: 35vw 20vw 0 20vw;
+  padding: 80px 20vw 80px 20vw;
   gap: 5em;
   overflow: hidden;
   /* font-size: 5em; */
