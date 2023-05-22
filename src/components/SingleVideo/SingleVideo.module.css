@@ -1,11 +1,14 @@
-.video {
+/* .video {
   border: solid 1px black;
-}
+} */
 
 .player_video {
   width: 100%;
   height: calc(9 / 16 * 90vw);
   /* aqui é importante ele define o tamanho do video  */
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
 }
 
 .containar_video, .thumbnail_container{
@@ -28,7 +31,10 @@
 .data_video {
   /* background-color: tomato; */
   width: 100%;
-  /* padding: 20px; */
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  padding-bottom: 10px;
+  position: relative;
 }
 
 .data_video > h3 {
@@ -42,4 +48,32 @@
 
 .data_video > p{
   padding: 0 20px;
+}
+
+.container_post_date {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  /* position: absolute; */
+  bottom: 0;
+  border-right: 1px solid black;
+}
+
+.post_date {
+  text-transform: capitalize;
+  color: var(--primary-color);
+  transform: translate(-4px, 6px);
+  font-weight: 400;
+  font-size: 1.4em;
+}
+
+.post_date strong {
+  font-weight: 900;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.bottom_wire {
+  flex-grow: 1;
+  border-bottom: 1px solid var(--primary-color);
 }

@@ -45,7 +45,15 @@ export default function SingleVideo({ video }) {
         <h3>{video.title}</h3>
         <BlockContent blocks={video.body} projectId="70kqnxpw" dataset="production" />
       </div>
-      <p dangerouslySetInnerHTML={{ __html: formatDate(video.publishedAt) }}></p>
+      {/* <p dangerouslySetInnerHTML={{ __html: formatDate(video.publishedAt) }}></p> */}
+
+      <div className={ styles.container_post_date }>
+            <span 
+              className={ styles.post_date }
+              dangerouslySetInnerHTML={{__html: formatDate(video.publishedAt)}}>
+            </span>
+            <div className={ styles.bottom_wire }></div>
+      </div>
     </div>
   );
 }
