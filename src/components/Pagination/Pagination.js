@@ -9,7 +9,7 @@ export default function Pagination({ pageCount, handlePageClick, currentPage }) 
       nextLabel={'Prev'}
       pageCount={pageCount}
       marginPagesDisplayed={1}
-      pageRangeDisplayed={0}
+      pageRangeDisplayed={2}
       onPageChange={handlePageClick}
       containerClassName={'pagination'}
       activeClassName={'active'}
