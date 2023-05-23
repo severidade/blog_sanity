@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import ExternalLink from '../ ExternalLink/ExternalLink';
 
 export default function Footer() {
 
@@ -7,63 +8,24 @@ export default function Footer() {
     <footer className={styles.container_footer}>
       <ul className={styles.container_social}>
         <li>
-          <a
-            className={styles.social_linkedin}
-            href="https://www.linkedin.com/in/severidade/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin
-          </a>
+          <ExternalLink href={"https://www.linkedin.com/in/severidade/"} linkText={"Linkedin"} social_type={"linkedin"} />
         </li>
         <li>
-          <a
-            className={styles.social_github}
-            href="https://github.com/severidade"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          <ExternalLink href={"https://github.com/severidade"} linkText={"GitHub"} social_type={"github"} />
         </li>
         <li>
-          <a
-            className={styles.social_codepen}
-            href="https://codepen.io/severidade"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            codepen
-          </a>
+          <ExternalLink href={"https://codepen.io/severidade"} linkText={"Codepen"} social_type={"codepen"} />
         </li>
       </ul>
       <div>
         <p>
           Este blog foi desenvolvido em{' '}
-          <a
-            href="https://react.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>{' '}
+          <ExternalLink href={"https://react.dev/"}  linkText={"React"} />{' '}
           e usa como plataforma de gerenciamento de conteúdo o{' '}
-          <a
-            href="https://www.sanity.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sanity
-          </a>.
+          <ExternalLink href={"https://www.sanity.io"} linkText={"Sanity"}/>.
         </p>
         <p>Veja o repositório desse projeto no{' '}
-            <a
-              href="https://github.com/severidade/blog_sanity"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>.
+          <ExternalLink href={ "https://github.com/severidade/blog_sanity" } linkText={ "GitHub" }/>.
         </p>
       </div>
     </footer>
