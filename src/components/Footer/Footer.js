@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import ExternalLink from '../ ExternalLink/ExternalLink';
 
 export default function Footer() {
 
@@ -40,30 +41,12 @@ export default function Footer() {
       <div>
         <p>
           Este blog foi desenvolvido em{' '}
-          <a
-            href="https://react.dev/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>{' '}
+          <ExternalLink href={"https://react.dev/"}  name={"React"} />{' '}
           e usa como plataforma de gerenciamento de conteúdo o{' '}
-          <a
-            href="https://www.sanity.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sanity
-          </a>.
+          <ExternalLink href={"https://www.sanity.io"} name={"Sanity"}/>.
         </p>
         <p>Veja o repositório desse projeto no{' '}
-            <a
-              href="https://github.com/severidade/blog_sanity"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>.
+          <ExternalLink href={ "https://github.com/severidade/blog_sanity" } name={ "GitHub" }/>.
         </p>
       </div>
     </footer>
