@@ -12,38 +12,8 @@
   padding: 10px 0;
 }
 
-.social_linkedin, .social_github, .social_codepen {
-  width: 35px;
-  height: 35px;
-  display: block;
-  overflow: hidden;
-  text-indent: -1000px;
-}
-
-.social_linkedin {
-  background: url(../../img/icon/linkedin.png) center / contain no-repeat;
-}
-
-.social_github {
-  background: url(../../img/icon/github.png) center / contain no-repeat;
-}
-
-.social_codepen {
-  background: url(../../img/icon/codpenIo.svg) center / contain no-repeat;
-}
-
-
 .container_footer p {
   color: white;
   text-align: center;
   font-size: 1.4em;
-}
-
-.container_footer a {
-  color: white;
-  font-weight: 900;
-  text-transform: uppercase;
-  /* text-decoration:underline; */
-  font-size: 0.9em;
-  color: tomato;
 }
