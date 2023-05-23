@@ -27,7 +27,7 @@ export default function Home() {
   if(!author) return <div className='loading'>Loading...</div>;
 
   return(
-    <main>
+    <main className='container_main'>
       <section className='container_section'>
         {/* <figure className='container_image'>
           <img
