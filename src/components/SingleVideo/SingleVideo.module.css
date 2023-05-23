@@ -7,10 +7,7 @@
 .player_video {
   width: 100%;
   height: calc(9 / 16 * 90vw);
-  /* aqui é importante ele define o tamanho do video  */
-  border-top: solid 1px black;
-  border-left: solid 1px black;
-  border-right: solid 1px black;
+  border: solid 1px black;
 }
 
 .containar_video, .thumbnail_container{
