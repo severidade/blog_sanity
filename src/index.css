@@ -114,6 +114,26 @@ img {
   font-size: 2em;
 }
 
+.slick-slider{
+  background-color: tomato;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slick-slider { 
+  position: relative;
+  display: flex;
+}
+
+.foto {
+  /* position: absolute; */
+  width: 200px;
+  height: 200px;
+}
+
 @media screen and (min-width: 750px) {
   .container_list_posts {
     width: 100%;
