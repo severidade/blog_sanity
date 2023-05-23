@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchPosts } from '../utils/fetch';
 import PosstList from '../components/PostList/PostList.js';
 import Pagination from '../components/Pagination/Pagination';
+import Footer from '../components/Footer/Footer';
 
 export default function BlogPosts() {
   const [postData, setPost] = useState(null);
@@ -64,6 +65,7 @@ export default function BlogPosts() {
           )}
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

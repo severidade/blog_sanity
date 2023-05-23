@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchSinglePost } from '../utils/fetch';
 import SinglePostContent from '../components/SinglePostContent/SinglePostContent';
 import { Helmet } from 'react-helmet';
+import Footer from '../components/Footer/Footer';
 
 export default function SinglePost() {
   const [singlePost, setSinglePost] = useState(null);
@@ -37,6 +38,7 @@ export default function SinglePost() {
           <meta property="og:url" content={ogData.url} />
         </Helmet>
         <SinglePostContent singlePost={singlePost} />
+        <Footer />
       </main>
   );
 }

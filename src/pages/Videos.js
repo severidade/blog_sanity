@@ -5,6 +5,7 @@ import Pagination from '../components/Pagination/Pagination';
 
 import { useDispatch } from 'react-redux';
 import { setPlayingVideoId } from '../store';
+import Footer from '../components/Footer/Footer';
 
 export default function Videos() {
   const [videos, setVideos] = useState(null);
@@ -73,6 +74,7 @@ export default function Videos() {
           )}
         </div>
       </section>
+      <Footer />
     </main>
   );
 }
