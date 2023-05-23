@@ -17,7 +17,7 @@ export default function Footer() {
           <ExternalLink href={"https://codepen.io/severidade"} linkText={"Codepen"} social_type={"codepen"} />
         </li>
       </ul>
-      <div>
+      <div className={styles.container_footer_description}>
         <p>
           Este blog foi desenvolvido em{' '}
           <ExternalLink href={"https://react.dev/"}  linkText={"React"} />{' '}
