@@ -190,7 +190,8 @@ img {
 
 @media screen and (min-width: 900px) {
   .container_section {
-    width: 80vw;
+    width: 60vw;
+    padding: 90px 0 40px 0;
   }
 
   .container_list_posts {
