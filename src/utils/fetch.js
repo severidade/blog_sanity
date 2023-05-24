@@ -99,6 +99,12 @@ export async function fetchPosts() {
   return fetchData(query, errorMessage);
 }
 
+export async function fetchHomeCarousel(numPosts) {
+  const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) [0...${numPosts - 1}] {${POST_FIELDS}}`;
+  const errorMessage = 'Ocorreu um erro ao buscar os posts para o carrossel:';
+  return fetchData(query, errorMessage);
+}
+
 export async function fetchSinglePost(slug) {
   const query = `*[slug.current == "${slug}"] {${SINGLE_POST_FIELDS}}`;
   const errorMessage = 'Ocorreu um erro ao buscar o post:';
