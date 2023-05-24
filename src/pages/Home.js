@@ -43,11 +43,12 @@ export default function Home() {
       {posts.length > 0 ? (
           <Slider>
             {posts.map((post) => (
-              <div key={post.slug}>
+              <div key={post.slug} className='slider'>
                 {/* Conteúdo do slide */}
-                <h2>{post.title}</h2>
-                <p>{post.sub_title}</p>
-                {/* Exiba a imagem do post: <img src={post.mainImage.url} alt={post.mainImage.alt} /> */}
+                <div className='conteudo'>
+                  <h2>{post.title}</h2>
+                  <p>{post.sub_title}</p>
+                </div>
                 <figure className="foto">
                   <img
                     // className={ styles.thumbnail }
