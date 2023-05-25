@@ -100,7 +100,7 @@ export async function fetchPosts() {
 }
 
 export async function fetchHomeCarousel(numPosts) {
-  const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) [0...${numPosts - 1}] {${POST_FIELDS}}`;
+  const query = `*[_type == "${POST_TYPE}"] | order(publishedAt desc) [0...${numPosts}] {${POST_FIELDS}}`;
   const errorMessage = 'Ocorreu um erro ao buscar os posts para o carrossel:';
   return fetchData(query, errorMessage);
 }
