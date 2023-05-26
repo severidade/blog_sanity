@@ -1,0 +1,93 @@
+.slick-slider{
+  /* background-color: tomato; */
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.slick-list {
+  border: solid olive 3px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+
+.slick-next, .slick-prev {
+  height: 80px;
+  width: 80px;
+  border-radius: 60px;
+  border: none;
+  background-color: black;
+  color: white;
+  display: none !important;
+}
+/* .slick-next {
+  position: absolute;
+  right: 20px;
+}
+
+.slick-prev {
+  position: absolute;
+  z-index: 9;
+  left: 20px;
+  z-index: 2;
+} */
+
+.slider {
+  position: relative;
+  height: 75vh;
+  width: 100%;
+  background-color: lightgreen;
+}
+.conteudo {
+  position: absolute;
+  z-index: 2;
+  background-color: black;
+  color: white;
+  width: 40vw;
+  height: 20vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.foto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;z-index: 1;
+}
+/* dots */
+
+.slick-dots {
+  width: 30px;
+  height: 200px;
+  position: absolute;
+  background-color: tomato;
+}
+
+.slick-dots > li {
+  display: none;
+}
+
+.slick-dots > li.slick-active{
+  background-color: violet;
+  display: inherit;
+}
+/* https://dribbble.com/shots/8831733-Museum-of-Art-Cluj-Napoca-Website-Redesign-Concept */
+/* https://www.behance.net/gallery/89501419/Museum-of-Art-Cluj-Napoca-Website-Redesign-Concept */
+
+
+/* https://dribbble.com/shots/9780962-Iskos-News */
+/* https://dribbble.com/shots/17721136-Fashion-Website-Slider-for-Wordpress */
+/* https://dribbble.com/shots/5433698-Playground-Foundation-Art-Archive-Hero-Story-Animation */
