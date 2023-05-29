@@ -12,6 +12,7 @@
   grid-template-rows: var(--row_mobile);
   height: var(--height_mobile);
   overflow: hidden;
+  background-color: black;
 }
 
 .total_posts {
@@ -26,10 +27,21 @@
 }
 
 .total_posts ul {
-  /* background-color: tomato; */
   height: 30px;
   width: 100%;
   position: relative;
+  margin-bottom: 40px;
+}
+
+.total_posts ul:after{
+  content: "";
+  height: 30px;
+  width: 1px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35px;
 }
 
 .total_posts li {
@@ -64,6 +76,7 @@
   font-weight: 400;
   font-size: 17px;
   border: none;
+  /* background-color: violet; */
 
 }
 
@@ -84,20 +97,20 @@
 .slick-list {
   grid-column: 1 / 15;
 	grid-row: 1 / 4;
-  background-color: gold;
+  /* background-color: gold; */
 }
 
 .slider {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: rgb(123, 43, 43);
+  /* background-color: rgb(123, 43, 43); */
 }
 
 .container_slider {
   height: calc(100vh - 60px);
   position: relative;
-  background-color: aqua;
+  /* background-color: aqua; */
 
   /* Subgrid */
   display: grid;
@@ -108,12 +121,12 @@
 
 .container_slider_picture {
   border: dotted blue 1px;
-  grid-column: 3 / 15;
+  grid-column: 1 / 15;
 	grid-row: 1 / 2;
 }
 
 .container_post_summary {
-  grid-column: 1 / 13;
+  grid-column: 3 / 13;
 	grid-row: 2 / 3;
   background-color: black;
   display: flex;
@@ -142,18 +155,58 @@
 }
 
 .slick-dots {
-  background-color: olive;
-  display: flex !important;
+  /* background-color: black; */
   grid-column: 13 / 15;
   grid-row: 2 / 3;
   z-index: 2;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
+.slick-dots li {
+  width: 100%;
+  /* background-color: blue; */
+  height: 40px;
+  margin-bottom: 0;
+}
 
+.slick-dots li button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: #ffd70000;
+  position: relative;
+  text-indent: -1000px;
+  overflow: hidden;
+}
+
+.slick-dots li button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  border: 2px solid white;
+  /* background-color: tomato; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slick-dots li.slick-active button:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .slick-next, .slick-prev {
   display: none !important;
 }
