@@ -13,6 +13,7 @@ export default function Carousel({ children }) {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    fade: true,
     autoplay: false,
     speed: 500,
     autoplaySpeed: 3000,
