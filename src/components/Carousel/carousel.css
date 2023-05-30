@@ -1,6 +1,6 @@
 .container_carousel {
   --columns_mobile: repeat(14, 1fr);
-  --rows_mobile:  1fr 45vh 60px 50px ;
+  --rows_mobile:  1fr 40vh 60px 50px ;
   --height_mobile: calc(100vh - 60px);
 
   margin-top: 60px;
