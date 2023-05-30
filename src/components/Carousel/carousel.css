@@ -1,7 +1,7 @@
 .container_carousel {
   --columns_mobile: repeat(14, 1fr);
   --rows_mobile: 45vh 50px 1fr 50px;
-  --height_mobile: calc(100dvh - 60px);
+  --height_mobile: calc(100vh - 60px);
 
   margin-top: 60px;
   width: 100vw;
@@ -15,7 +15,6 @@
 .total_posts {
   grid-column: 13 / 15;
   grid-row: 3 / 4;
-  /* border: solid 1px tomato; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -242,7 +241,6 @@ div.slick-slide.slick-active  .container_post_summary::after {
   height: 10px;
   border-radius: 20px;
   border: 2px solid white;
-  /* background-color: tomato; */
   position: absolute;
   left: 50%;
   top: 50%;
