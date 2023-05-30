@@ -18,6 +18,7 @@ export default function Carousel({ children }) {
     speed: 500,
     autoplaySpeed: 3000,
     cssEase: "linear",
+    swipeThreshold: 1, // reduz o deslizamento horizontal para ativar o slider - padrao é 5
     beforeChange: (current, next) => setCurrentSlide(next)
   };
 
