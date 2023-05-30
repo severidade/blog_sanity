@@ -108,7 +108,6 @@
   grid-template-columns: var(--columns_mobile);
   grid-template-rows: var(--rows_mobile);
   height: var(--height_mobile);
-  /* padding-bottom: 40px; */
 }
 
 .container_slider_picture {
