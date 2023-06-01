@@ -1,6 +1,6 @@
 .container_carousel {
   --columns_mobile: repeat(14, 1fr);
-  --rows_mobile:  1fr 40vh 80px 90px ;
+  --rows_mobile: 40vh 1fr  80px 90px ;
   --height_mobile: calc(100vh - 60px);
 
   margin-top: 60px;
@@ -13,8 +13,8 @@
 }
 
 .total_posts {
-  grid-column: 1 / 4;
-  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,12 +26,12 @@
     height: 30px;
     width: 100%;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   .total_posts ul:after{
     content: "";
-    height: 30px;
+    height: 50px;
     width: 1px;
     background-color: white;
     position: absolute;
@@ -97,6 +97,7 @@
   position: relative;
   width: 100%;
   height: 100%;
+  background: black;
 }
 
 .container_slider {
@@ -112,10 +113,11 @@
 
 .container_slider_picture {
   /* border: dotted blue 1px; */
-  grid-column: 4 / 15;
+  grid-column: 3 / 13;
+	grid-row: 1 / 2;
+  /* display: none; */
+  
   width: 100%;
-
-	grid-row: 2 / 3;
   overflow: hidden;
   z-index: 2;
 }
@@ -133,7 +135,7 @@
 
 .container_post_summary {
   grid-column: 4 / 13;
-	grid-row: 1 / 2;
+	grid-row: 2 / 3;
   background-color: rgb(2, 2, 2);
   display: flex;
   flex-direction: column;
@@ -260,5 +262,19 @@ div.slick-slide.slick-active  .container_post_summary::after {
   transform: translate(-50%, -50%);
 }
 .slick-next, .slick-prev {
-  display: none !important;
+  /* display: none !important; */
+  z-index: 2;
+  writing-mode: tb-rl;
+  background-color: turquoise;
+  
+}
+
+.slick-next {
+  grid-column: 13 / 15;
+  grid-row: 2 / 3;
+}
+
+.slick-prev {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
 }
