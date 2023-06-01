@@ -250,23 +250,38 @@ div.slick-slide.slick-active  .container_post_summary::after {
   transform: translate(-50%, -50%);
 }
 
-.slick-dots li.slick-active button:after {
+
+.slick-dots li button:after {
   content: "";
   width: 10px;
   height: 10px;
   border-radius: 10px;
-  background-color: white;
+  
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  transition: width 0.5s ease-in-out;
 }
+
+.slick-dots li.slick-active button:after {
+  content: "";
+  width: 35px;
+  background-color: white;
+}
+
+
+/* Botões de avançar e retroceder slider */
+
 .slick-next, .slick-prev {
-  /* display: none !important; */
   z-index: 2;
   writing-mode: tb-rl;
-  background-color: turquoise;
-  
+  background-color: rgba(0, 0, 0, 0);
+  text-indent: 0px;
+  overflow: hidden;
+  border: none;
+  position: relative;
+  text-indent: 600px;
 }
 
 .slick-next {
@@ -277,4 +292,33 @@ div.slick-slide.slick-active  .container_post_summary::after {
 .slick-prev {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+}
+
+.slick-next:before, .slick-prev:before  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-indent: 0 !important;
+  writing-mode: tb-rl;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.3px;
+  font-size: 13px;
+}
+
+.slick-next:before {
+  content: "Next"; /* diferente */
+  transform: rotate(-180deg);/* diferente */
+}
+
+.slick-prev:before {
+  content: "prev";/* diferente */
+  transform: rotate(0deg);/* diferente */
 }
