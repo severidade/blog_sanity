@@ -73,7 +73,7 @@ img {
 .container_section, .container_post_carousel {
   width: 100%;
   margin: auto;
-  padding: 90px 5vw 40px 5vw;
+  padding: 40px 5vw 40px 5vw;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
