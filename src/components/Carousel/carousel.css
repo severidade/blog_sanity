@@ -1,7 +1,7 @@
 .container_carousel {
   --columns_mobile: repeat(14, 1fr);
-  --rows_mobile: 40vh 1fr  80px 90px ;
-  --height_mobile: calc(100vh - 60px);
+  --rows_mobile: 35vh 1fr  80px 50px ;
+  --height_mobile: calc(85vh - 60px);
 
   margin-top: 60px;
   width: 100vw;
@@ -218,7 +218,7 @@ div.slick-slide.slick-active  .container_post_summary::after {
   display: flex !important;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .slick-dots li {
