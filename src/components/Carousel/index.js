@@ -53,7 +53,7 @@ export default function Carousel({ children }) {
           ))}
         </Slider>
       ) : (
-        <div className='loading'>Loading...</div>
+        <div className='loading_carousel'>Loading...</div>
       )}
       {posts.length > 0 && (
         <div className="total_posts">
