@@ -27,9 +27,18 @@ export default function Home() {
   return(
     <main className='container_main'>
       <Carousel children={ posts }/>
-      <section className='container_section'>
-        <h1>Sobre esse blog</h1>
-        <p>Sanity é uma plataforma de gerenciamento de conteúdo (Content Management System - CMS) que permite criar, gerenciar e distribuir conteúdo para aplicativos, sites e outros canais digitais. No entanto, ela se diferencia dos CMS tradicionais por ser uma plataforma headless, o que significa que ela separa a camada de gerenciamento de conteúdo da camada de apresentação, permitindo que o conteúdo seja consumido por diferentes interfaces e dispositivos. Além disso, a Sanity é altamente flexível e customizável, permitindo que os desenvolvedores criem soluções sob medida para seus projetos.</p>
+      <section className='container_home'>
+        <h1 className='post_title'>Sobre esse blog</h1>
+        <p>Este blog em React adota a abordagem headless, na qual a camada de gerenciamento de conteúdo é separada da camada de apresentação. Diferentemente dos CMS tradicionais, como o WordPress, essa separação permite que o conteúdo seja consumido por diferentes interfaces e dispositivos de forma mais flexível. Dos CMS headless disponíveis optei por usar o Sanity pela facilidade de instalação e configuração</p>
+
+        <p>Essa experiência de configurar e integrar o Sanity com o React foi uma valiosa oportunidade de aprendizado e prática, permitindo que eu explorasse as capacidades do CMS headless e entendesse como ele pode ser utilizado para criar aplicações web mais dinâmicas e personalizáveis.</p>
+
+        <h1>Dependências</h1>
+        <ul>
+          <li>O <strong>ReactPlayer</strong>, usado na seção de vídeos, é uma biblioteca popular e poderosa para reprodução de mídia em aplicações React. Ela oferece uma maneira fácil de incorporar e controlar diferentes tipos de mídia, como vídeos e áudios, em componentes React.</li>
+          <li>Para a criação do Carrossel de imagens na página Home usei o <strong>Slick Carousel</strong> devido a sua facilidade de uso, configuração e API intuitiva. </li>
+        </ul>
+    
       </section>
       <Footer />
     </main>
