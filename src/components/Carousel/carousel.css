@@ -261,7 +261,6 @@ div.slick-slide.slick-active  .container_post_summary::after {
   transform: translate(-50%, -50%);
 }
 
-
 .slick-dots li button:after {
   content: "";
   width: 10px;
@@ -273,6 +272,10 @@ div.slick-slide.slick-active  .container_post_summary::after {
   top: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.5s ease-in-out;
+}
+
+.slick-dots li.slick-active button:before {
+  display: none;
 }
 
 .slick-dots li.slick-active button:after {
