@@ -23,10 +23,12 @@ export default function Navbar() {
         to="/" 
         className="logo"
         onClick={toggleMenuHome}
-      />
+      >THE<span>BOX</span></NavLink>
       <div
         className={`hamburger ${menuOpen ? 'open' : ''}`}
-        onClick={toggleMenu}>
+        onClick={toggleMenu}
+      >
+        <div className='hamburger_animacao'></div>
       </div>
       <nav className={`container_nav ${menuOpen ? 'open' : ''}`}>
         <div
@@ -35,7 +37,7 @@ export default function Navbar() {
         </div>
         <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
         <NavLink to="/post" onClick={toggleMenu}>Blog Posts</NavLink>
-        <NavLink to="/projects"onClick={toggleMenu} >Projects</NavLink>
+        <NavLink to="/videos" onClick={toggleMenu}>Videos</NavLink>
       </nav>
     </header>
   )

@@ -1,0 +1,27 @@
+.external_link {
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: tomato;
+}
+
+.social_linkedin, .social_github, .social_codepen {
+  width: 40px;
+  height: 40px;
+  display: block;
+  overflow: hidden;
+  text-indent: -1000px;
+}
+
+.social_linkedin {
+  background: url(../../img/icon/linkedin.png) center / contain no-repeat;
+}
+
+.social_github {
+  background: url(../../img/icon/github.png) center / contain no-repeat;
+}
+
+.social_codepen {
+  background: url(../../img/icon/codpenIo.svg) center / contain no-repeat;
+}

@@ -29,3 +29,11 @@
   left: 0px;
   transform: rotate(0deg);
 }
+
+@media screen and (min-width: 750px) {
+  .next_post, .prev_post {
+    height: 300px;
+    top: 50vh;
+    transform: translateY(-50%);
+  }
+}
