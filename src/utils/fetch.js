@@ -41,6 +41,7 @@ const SINGLE_POST_FIELDS = `
   slug,
   body,
   ${MAIN_IMAGE_FIELDS},
+  ${THUMBNAIL_IMAGE_FIELDS},
   "name": author -> name,
   "authorImage": author -> image
 `;

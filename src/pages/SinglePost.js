@@ -20,12 +20,9 @@ export default function SinglePost() {
   const ogData = {
     title: singlePost.title,
     // description: singlePost.excerpt,
-    image: singlePost.mainImage.asset.url,
+    image: singlePost.thumbnailImage.asset.url,
     url: window.location.href,
   };
-
-  console.log(ogData);
-  console.log(singlePost);
 
   return (
       <main className='container_main'>
