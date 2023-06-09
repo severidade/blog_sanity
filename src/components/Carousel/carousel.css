@@ -10,6 +10,7 @@
   grid-template-rows: var(--rows_mobile);
   height: var(--height_mobile);
   overflow: hidden;
+  background-color: black;
 }
 
 .loading_carousel {
