@@ -21,13 +21,13 @@
 }
 
 .prev_post {
-  right: 0px;
-  transform: rotate(-180deg);
+  left: 0px;
+  transform: rotate(0deg);
 }
 
 .next_post {
-  left: 0px;
-  transform: rotate(0deg);
+  right: 0px;
+  transform: rotate(-180deg);
 }
 
 @media screen and (min-width: 750px) {

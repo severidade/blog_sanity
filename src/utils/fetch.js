@@ -117,15 +117,27 @@ export async function fetchProjects() {
   return fetchData(query, errorMessage);
 }
 
+// export async function fetchPreviousPost(publishedAt) {
+//   const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
+//   const errorMessage = 'Ocorreu um erro ao buscar o post anterior:';
+//   return fetchData(query, errorMessage);
+// }
+
+// export async function fetchNextPost(publishedAt) {
+//   const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
+//   const errorMessage = 'Ocorreu um erro ao buscar o próximo post:';
+//   return fetchData(query, errorMessage);
+// }
+
 export async function fetchPreviousPost(publishedAt) {
-  const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
-  const errorMessage = 'Ocorreu um erro ao buscar o post anterior:';
+  const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
+  const errorMessage = 'Ocorreu um erro ao buscar o próximo post:';
   return fetchData(query, errorMessage);
 }
 
 export async function fetchNextPost(publishedAt) {
-  const query = `*[_type == "${POST_TYPE}" && publishedAt > "${publishedAt}"] | order(publishedAt asc)[0] {${POST_FIELDS}}`;
-  const errorMessage = 'Ocorreu um erro ao buscar o próximo post:';
+  const query = `*[_type == "${POST_TYPE}" && publishedAt < "${publishedAt}"] | order(publishedAt desc)[0] {${POST_FIELDS}}`;
+  const errorMessage = 'Ocorreu um erro ao buscar o post anterior:';
   return fetchData(query, errorMessage);
 }
 
