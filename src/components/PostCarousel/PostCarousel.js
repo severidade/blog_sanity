@@ -33,7 +33,7 @@ export default function PostCarousel({ singlePost }) {
           className={ styles.next_post }
           onClick={scrollToTop}
         > 
-          <strong>Next</strong> Post 
+          <strong>Next</strong> Post
           {/* {nextPost.title}  */}
         </Link>
       )}
