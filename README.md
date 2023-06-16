@@ -9,10 +9,11 @@
       <img src="./img/02.gif" alt="Descrição da imagem">
     </td>
     <td width="34%">
-      <img src="./img/03.png" alt="Descrição da imagem">
+      <!-- <img src="./img/03.png" alt="Descrição da imagem"> -->
+      <source src="./img/03.mp4" type="video/mp4">
     </td>
     <td width="33%">
-      <img src="./img/04.gif" alt="Descrição da imagem">
+      <img src="./img/gif4.gif" alt="Descrição da imagem">
     </td>
   </tr>
 </table>
