@@ -1,3 +1,24 @@
+<table>
+  <tr>
+    <th colspan="3">
+      <img src="./img/01.png" alt="Descrição da imagem">
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <img src="./img/02.gif" alt="Descrição da imagem">
+    </td>
+    <td>
+      <img src="./img/03.png" alt="Descrição da imagem">
+    </td>
+    <td>
+      <img src="./img/04.gif" alt="Descrição da imagem">
+    </td>
+  </tr>
+</table>
+
+
+
 <h1>Primeiro Projeto Usando o Sanity como gerenciador de conteúdo</h1>
 
 <p>Esta aplicação utiliza o CMS Sanity.io para criar um blog.<p>
