@@ -5,13 +5,13 @@
     </th>
   </tr>
   <tr>
-    <td>
+    <td width="33%">
       <img src="./img/02.gif" alt="Descrição da imagem">
     </td>
-    <td>
+    <td width="34%">
       <img src="./img/03.png" alt="Descrição da imagem">
     </td>
-    <td>
+    <td width="33%">
       <img src="./img/04.gif" alt="Descrição da imagem">
     </td>
   </tr>
