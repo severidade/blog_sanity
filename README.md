@@ -1,18 +1,15 @@
 <table>
-  <tr>
+  <!-- <tr>
     <th colspan="3">
       <img src="./img/01.png" alt="Descrição da imagem">
     </th>
-  </tr>
+  </tr> -->
   <tr>
-    <td width="33%">
-      <img src="./img/02_2.gif" alt="Descrição da imagem">
+    <td width="66%">
+      <img src="./img/01.png" alt="Descrição da imagem">
     </td>
     <td width="34%">
       <img src="./img/03.png" alt="Descrição da imagem">
-    </td>
-    <td width="33%">
-      <img src="./img/gif4.gif" alt="Descrição da imagem">
     </td>
   </tr>
 </table>
