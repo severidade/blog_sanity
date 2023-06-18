@@ -8,6 +8,7 @@
   width: 100%;
   height: calc(9 / 16 * 90vw);
   border: solid 1px black;
+  background-color: black;
 }
 
 .containar_video, .thumbnail_container{
