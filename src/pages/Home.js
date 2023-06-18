@@ -33,10 +33,11 @@ export default function Home() {
 
         <p>Essa experiência de configurar e integrar o Sanity com o React foi uma valiosa oportunidade de aprendizado e prática, permitindo que eu explorasse as capacidades do CMS headless e entendesse como ele pode ser utilizado para criar aplicações web mais dinâmicas e personalizáveis.</p>
 
-        <h1>Dependências</h1>
-        <ul>
+        <h3>Dependências</h3>
+        <ul className='dependencias_lista'>
           <li>O <strong>ReactPlayer</strong>, usado na seção de vídeos, é uma biblioteca popular e poderosa para reprodução de mídia em aplicações React. Ela oferece uma maneira fácil de incorporar e controlar diferentes tipos de mídia, como vídeos e áudios, em componentes React.</li>
           <li>Para a criação do Carrossel de imagens na página Home usei o <strong>Slick Carousel</strong> devido a sua facilidade de uso, configuração e API intuitiva. </li>
+          <li>Para adicionar o monitoramento do <strong>Google Analytics</strong> ao blog, utilizei a biblioteca <strong>React-GA4</strong>. Essa biblioteca simplifica o processo de configuração e rastreamento de eventos e métricas no Google Analytics para aplicativos React. </li>
         </ul>
     
       </section>
