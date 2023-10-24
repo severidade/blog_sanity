@@ -1,6 +1,7 @@
-import sanityClient from '@sanity/client';
+// import sanityClient from '@sanity/client';
+import { createClient } from '@sanity/client';
 
-export default sanityClient({
+export default createClient({
   projectId: '26f1x0iy',
   dataset: 'production',
   // as informações acima estão no arquivo sanity.cli.js
